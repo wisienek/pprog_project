@@ -1,0 +1,27 @@
+﻿  Menu.cpp
+I:\GITHUB\pprog_project\pprog_project\Menu.cpp(18,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+I:\GITHUB\pprog_project\pprog_project\Menu.cpp(23,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+I:\GITHUB\pprog_project\pprog_project\Menu.cpp(28,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+I:\GITHUB\pprog_project\pprog_project\Menu.cpp(33,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+I:\GITHUB\pprog_project\pprog_project\Menu.cpp(38,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+  pprog_project.vcxproj -> I:\GITHUB\pprog_project\x64\Debug\pprog_project.exe
