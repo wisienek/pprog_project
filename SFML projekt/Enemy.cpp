@@ -33,3 +33,4 @@ Enemy::Enemy( std::string type ){
 		this->view = 15.f;
 	}
 }
+Enemy::~Enemy() {}

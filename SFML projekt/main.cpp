@@ -3,6 +3,7 @@
 
 #include "Menu.h"
 #include "IEntity.h"
+#include "Authors.h"
 
 
 int main()
@@ -10,9 +11,11 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1280, 720), "Game");
 
     Menu menu(window.getSize().x, window.getSize().y);
+    Authors authors(window.getSize().x, window.getSize().y);
 
     while (window.isOpen())
     {
+        sf::Vector2i mouse_pos = sf::Mouse::getPosition(window);
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -22,6 +25,45 @@ int main()
 
             case sf::Event::Closed:
                 window.close();
+            case sf::Event::MouseMoved:
+                menu.MouseMove(mouse_pos);
+            case sf::Event::MouseButtonPressed:
+                switch (event.key.code)
+                {
+
+                case sf::Mouse::Left:
+                    switch (menu.GetPressedItem())
+                    {
+                    case 0:
+                        std::cout << "Gra startuje" << std::endl;
+                        window.clear();
+                        break;
+                    case 1:
+                        std::cout << "Wczytywanie" << std::endl;
+                        break;
+                    case 2:
+                        std::cout << "Wyniki" << std::endl;
+                        break;
+                    case 3:
+                        std::cout << "Opcje" << std::endl;
+                        break;
+                    case 4:
+                        std::cout << "Autorzy" << std::endl;
+                        while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                        {
+                            window.clear();
+                            authors.draw(window);
+                            window.display();
+                         
+                        }
+                        break;
+                    case 5:
+                        std::cout << "Wyjscie" << std::endl;
+                        window.close();
+                        break;
+                    }
+                }
+                break;
 
             case sf::Event::KeyReleased:
                 switch (event.key.code)
@@ -50,9 +92,19 @@ int main()
                         std::cout << "Wyniki" << std::endl;
                         break;
                     case 3:
-                        std::cout << "Autorzy" << std::endl;
+                        std::cout << "Opcje" << std::endl;
                         break;
                     case 4:
+                        std::cout << "Autorzy" << std::endl;
+                        while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                        {
+                            window.clear();
+                            authors.draw(window);
+                            window.display();
+
+                        }
+                        break;
+                    case 5:
                         std::cout << "Wyjscie" << std::endl;
                         window.close();
                         break;
