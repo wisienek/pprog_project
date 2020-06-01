@@ -15,7 +15,6 @@ protected:
 
 	sf::RectangleShape shape;
 
-
 public:
 	IEntity();
 	virtual ~IEntity();
