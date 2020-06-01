@@ -1,10 +1,14 @@
 #pragma once
+#include <SFML/Graphics.hpp>
+
 class Bullet_b
 {
+protected:
 	int power;
 	bool penetrating;
-	float speed;
+	float mvspeed;
 
+	sf::RectangleShape shape;
 
 public:
 	Bullet_b();

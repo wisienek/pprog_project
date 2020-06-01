@@ -1,7 +1,5 @@
 #include "IEntity.h"
 
-
-
 IEntity::IEntity() {
 	++count;
 	this->shape.setSize(sf::Vector2f(50.f, 50.f));
@@ -9,6 +7,7 @@ IEntity::IEntity() {
 	this->armour = 100;
 	this->hp = 100;
 	this->id = count;
+	this->view = 25.f;
 }
 
 IEntity::~IEntity() {
