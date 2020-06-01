@@ -4,6 +4,7 @@
 #include "Menu.h"
 #include "IEntity.h"
 #include "Authors.h"
+#include "Difficulty.h"
 
 
 int main()
@@ -12,6 +13,7 @@ int main()
 
     Menu menu(window.getSize().x, window.getSize().y);
     Authors authors(window.getSize().x, window.getSize().y);
+    Difficulty difficulty(window.getSize().x, window.getSize().y);
 
     while (window.isOpen())
     {
@@ -36,7 +38,13 @@ int main()
                     {
                     case 0:
                         std::cout << "Gra startuje" << std::endl;
-                        window.clear();
+                        while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                        {
+                            window.clear();
+                            difficulty.draw(window);
+                            window.display();
+
+                        }
                         break;
                     case 1:
                         std::cout << "Wczytywanie" << std::endl;

@@ -14,9 +14,9 @@ protected:
 	float mvspeed; //Jak szybko siê porusza
 	float view; //Jaki ma zasiêg widzenia
 	int recoil; //Co ile sekund mo¿e strzelaæ
-
-	Bullet_b* b; //WskaŸnik na typ pocisku
 	sf::RectangleShape shape;
+
+	Bullet_b *b;
 
 public:
 	IEntity();

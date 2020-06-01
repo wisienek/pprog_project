@@ -1,1 +1,38 @@
-﻿
+﻿  Bullet_b.cpp
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\IEntity.h(19,11): error C2143: błąd składniowy: brakuje „;” przed „*”
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\IEntity.h(19,11): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\IEntity.h(19,13): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+  Enemy.cpp
+  IEntity.cpp
+  main.cpp
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(14,51): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(14,31): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(15,57): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(15,37): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(16,63): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(16,43): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+  Generowanie kodu...

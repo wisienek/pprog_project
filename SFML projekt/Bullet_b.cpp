@@ -3,7 +3,7 @@
 Bullet_b::Bullet_b() {
 	power = 20;
 	penetrating = false;
-	mvspeed = 95.f
+	mvspeed = 95.f;
 }
 
 

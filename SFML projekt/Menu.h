@@ -5,6 +5,11 @@
 class Menu
 {
 public:
+
+	int selectedItemIndex;
+	sf::Font font;
+
+	Menu();
 	Menu(float width, float height);
 	~Menu();
 
@@ -16,8 +21,6 @@ public:
 	void MouseMove(sf::Vector2i mouse_pos);
 
 private:
-	int selectedItemIndex;
-	sf::Font font;
 	sf::Text menu[MAX_NUMBER_OF_ITEMS];
 	sf::Texture logotexture;
 	sf::Sprite logo;
