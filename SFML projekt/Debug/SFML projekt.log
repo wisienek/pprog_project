@@ -1,0 +1,43 @@
+﻿  Bullet_b.cpp
+  Game.cpp
+  IEntity.cpp
+  main.cpp
+E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\main.cpp(12,51): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\main.cpp(12,31): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+  Menu.cpp
+E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Menu.cpp(18,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Menu.cpp(23,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Menu.cpp(28,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Menu.cpp(33,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Menu.cpp(38,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+  Window.cpp
+  Generowanie kodu...
+  SFML projekt.vcxproj -> E:\projekty\programowanie\pprog_końcowy\pprog_project\Debug\SFML projekt.exe
