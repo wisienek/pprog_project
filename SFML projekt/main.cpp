@@ -16,8 +16,13 @@ int main()
         sf::Event event;
         while (window.pollEvent(event))
         {
+
             switch (event.type)
             {
+
+            case sf::Event::Closed:
+                window.close();
+
             case sf::Event::KeyReleased:
                 switch (event.key.code)
                 {
@@ -34,6 +39,7 @@ int main()
                     {
                     case 0:
                         std::cout << "Gra startuje" << std::endl;
+                        window.clear();
 
 
                         break;
