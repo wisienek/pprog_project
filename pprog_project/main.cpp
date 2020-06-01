@@ -1,4 +1,4 @@
-#include "include/SFML/Graphics.hpp"
+#include <SFML/Graphics.hpp>
 #include "Menu.h"
 #include <iostream>
 
@@ -99,9 +99,9 @@ int main()
             
         }
 
-                window.clear();
-                menu.draw(window);
-                window.display();
+        window.clear();
+        menu.draw(window);
+        window.display();
     }
     return 0;
 }
