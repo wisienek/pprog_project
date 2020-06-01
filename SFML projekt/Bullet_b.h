@@ -4,9 +4,9 @@
 class Bullet_b
 {
 protected:
-	int power;
-	bool penetrating;
-	float mvspeed;
+	int power; //Ile ma pobieraæ z hp/armora
+	bool penetrating; //Czy ma omijaæ armor
+	float mvspeed; //Jak szybko siê porusza
 
 	sf::RectangleShape shape;
 
