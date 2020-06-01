@@ -1,7 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "SFML/Graphics/Sprite.hpp"
-#define MAX_NUMBER_OF_ITEMS 5
+#define MAX_NUMBER_OF_ITEMS 6
 class Menu
 {
 public:
@@ -13,11 +13,13 @@ public:
 	void MoveDown();
 
 	int GetPressedItem() { return selectedItemIndex; }
-
+	void MouseMove(sf::Vector2i mouse_pos);
+	
 private:
+	sf::Text menu[MAX_NUMBER_OF_ITEMS];
 	int selectedItemIndex;
 	sf::Font font;
-	sf::Text menu[MAX_NUMBER_OF_ITEMS];
+	
 	sf::Texture logotexture;
 	sf::Sprite logo;
 };

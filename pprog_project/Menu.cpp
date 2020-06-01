@@ -1,10 +1,11 @@
 #include "Menu.h"
+#include <iostream>
 
 Menu::Menu(float width, float height)
 {
 	if (!font.loadFromFile("lunchds.ttf"))
 	{
-		//error
+		std::cout << "BRAK CZCIONKI!" << std::endl;
 	}
 
 	logotexture.loadFromFile("zsk.png");
@@ -29,13 +30,18 @@ Menu::Menu(float width, float height)
 
 	menu[3].setFont(font);
 	menu[3].setFillColor(sf::Color::White);
-	menu[3].setString("Autorzy");
-	menu[3].setPosition(sf::Vector2f(width/2.5, height / (MAX_NUMBER_OF_ITEMS + 1) * 4));
+	menu[3].setString("Opcje");
+	menu[3].setPosition(sf::Vector2f(width / 2.5, height / (MAX_NUMBER_OF_ITEMS + 1) * 4));
 
 	menu[4].setFont(font);
 	menu[4].setFillColor(sf::Color::White);
-	menu[4].setString("Wyjscie");
+	menu[4].setString("Autorzy");
 	menu[4].setPosition(sf::Vector2f(width/2.5, height / (MAX_NUMBER_OF_ITEMS + 1) * 5));
+
+	menu[5].setFont(font);
+	menu[5].setFillColor(sf::Color::White);
+	menu[5].setString("Wyjscie");
+	menu[5].setPosition(sf::Vector2f(width/2.5, height / (MAX_NUMBER_OF_ITEMS + 1) * 6));
 
 	selectedItemIndex = 0;
 }
@@ -72,3 +78,25 @@ void Menu::MoveDown()
 		menu[selectedItemIndex].setFillColor(sf::Color::Red);
 	}
 }
+
+void Menu::MouseMove(sf::Vector2i mouse_pos)
+{
+	selectedItemIndex = -1;
+	sf::Vector2f mouse_pos_translated = static_cast<sf::Vector2f>(mouse_pos);
+	for (int i = 0; i <= 5; i++)
+		menu[i].setFillColor(sf::Color::White);
+	for (int i = 0; i <= 5; i++)
+	{
+		if (menu[i].getGlobalBounds().contains(mouse_pos_translated))
+		{
+			menu[i].setFillColor(sf::Color::Red);
+			selectedItemIndex = i;
+		}
+	}
+	
+}
+
+
+
+
+
