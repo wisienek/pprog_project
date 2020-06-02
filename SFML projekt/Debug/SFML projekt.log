@@ -1,34 +1,34 @@
 ﻿  main.cpp
-C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
-C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Menu.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
-C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(15,51): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+I:\GITHUB\repos\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+I:\GITHUB\repos\pprog_project\SFML projekt\Authors.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(16,51): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(15,31): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(16,31): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(16,57): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(17,57): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(16,37): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(17,37): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(17,63): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(18,63): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(17,43): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(18,43): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-  SFML projekt.vcxproj -> C:\Users\user\Documents\GitHub\pprog_project\Debug\SFML projekt.exe
+  SFML projekt.vcxproj -> I:\GITHUB\repos\pprog_project\Debug\SFML projekt.exe

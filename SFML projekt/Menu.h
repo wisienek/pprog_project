@@ -1,4 +1,5 @@
 #pragma once
+#include "Authors.h"
 #include "SFML/Graphics.hpp"
 #include "SFML/Graphics/Sprite.hpp"
 #define MAX_NUMBER_OF_ITEMS 6
@@ -16,6 +17,7 @@ public:
 
 	int GetPressedItem() { return selectedItemIndex; }
 	void MouseMove(sf::Vector2i mouse_pos);
+	void MenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i mouse_pos, Authors& authors);
 
 private:
 	sf::Text menu[MAX_NUMBER_OF_ITEMS];

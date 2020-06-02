@@ -95,3 +95,102 @@ void Menu::MouseMove(sf::Vector2i mouse_pos)
 	}
 
 }
+
+void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i mouse_pos, Authors& authors)
+{
+    while (window.pollEvent(event))
+    {
+
+        switch (event.type)
+        {
+
+        case sf::Event::Closed:
+            window.close();
+        case sf::Event::MouseMoved:
+            this->MouseMove(mouse_pos);
+        case sf::Event::MouseButtonPressed:
+            switch (event.key.code)
+            {
+
+            case sf::Mouse::Left:
+            case sf::Keyboard::Enter:
+                switch (this->GetPressedItem())
+                {
+                case 0:
+                    std::cout << "Gra startuje" << std::endl;
+                    break;
+                case 1:
+                    std::cout << "Wczytywanie" << std::endl;
+                    break;
+                case 2:
+                    std::cout << "Wyniki" << std::endl;
+                    break;
+                case 3:
+                    std::cout << "Opcje" << std::endl;
+                    break;
+                case 4:
+                    std::cout << "Autorzy" << std::endl;
+                    while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                    {
+                        
+                        window.clear();
+                        authors.draw(window);
+                        window.display();
+                    }
+                    break;
+                case 5:
+                    std::cout << "Wyjscie" << std::endl;
+                    window.close();
+                    break;
+                }
+            }
+            break;
+
+        case sf::Event::KeyReleased:
+            switch (event.key.code)
+            {
+            case sf::Keyboard::Up:
+                this->MoveUp();
+                break;
+
+            case sf::Keyboard::Down:
+                this->MoveDown();
+                break;
+
+            case sf::Keyboard::Return:
+                switch (this->GetPressedItem())
+                {
+                case 0:
+                    std::cout << "Gra startuje" << std::endl;
+                    window.clear();
+
+
+                    break;
+                case 1:
+                    std::cout << "Wczytywanie" << std::endl;
+                    break;
+                case 2:
+                    std::cout << "Wyniki" << std::endl;
+                    break;
+                case 3:
+                    std::cout << "Opcje" << std::endl;
+                    break;
+                case 4:
+                    std::cout << "Autorzy" << std::endl;
+                    while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                    {
+                        window.clear();
+                        authors.draw(window);
+                        window.display();
+
+                    }
+                    break;
+                case 5:
+                    std::cout << "Wyjscie" << std::endl;
+                    window.close();
+                    break;
+                }
+            }
+        }
+    }
+}
