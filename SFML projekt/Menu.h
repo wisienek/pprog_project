@@ -6,9 +6,6 @@ class Menu
 {
 public:
 
-	int selectedItemIndex;
-	sf::Font font;
-
 	Menu();
 	Menu(float width, float height);
 	~Menu();
@@ -24,5 +21,7 @@ private:
 	sf::Text menu[MAX_NUMBER_OF_ITEMS];
 	sf::Texture logotexture;
 	sf::Sprite logo;
+	int selectedItemIndex;
+	sf::Font font;
 };
 

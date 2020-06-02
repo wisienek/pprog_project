@@ -1,4 +1,4 @@
-#include "IEntity.h"
+/*#include "IEntity.h"
 
 IEntity::IEntity() {
 	++count;
@@ -18,4 +18,4 @@ IEntity::~IEntity() {
 
 void IEntity::move(const float x, const float y) {
 	this->shape.move(x * this->mvspeed, y * this->mvspeed);
-}
+}*/

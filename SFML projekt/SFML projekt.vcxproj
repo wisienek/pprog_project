@@ -155,7 +155,10 @@
   <ItemGroup>
     <ClCompile Include="Authors.cpp" />
     <ClCompile Include="Bullet_b.cpp" />
-    <ClCompile Include="Difficulty.cpp" />
+    <ClCompile Include="Difficulty.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="IEntity.cpp" />
@@ -166,12 +169,21 @@
   <ItemGroup>
     <ClInclude Include="Authors.h" />
     <ClInclude Include="Bullet_b.h" />
-    <ClInclude Include="Difficulty.h" />
+    <ClInclude Include="Difficulty.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="IEntity.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="lunchds.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="zsk.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

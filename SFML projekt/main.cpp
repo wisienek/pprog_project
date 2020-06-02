@@ -1,5 +1,6 @@
 ﻿#include <SFML/Graphics.hpp>
 #include <iostream>
+#include <Windows.h>
 
 #include "Menu.h"
 #include "IEntity.h"
@@ -34,16 +35,43 @@ int main()
                 {
 
                 case sf::Mouse::Left:
+                case sf::Keyboard::Enter:
                     switch (menu.GetPressedItem())
                     {
                     case 0:
-                        std::cout << "Gra startuje" << std::endl;
+                        window.clear();
+                        difficulty.draw(window);
+                        window.display();
                         while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-                        {
-                            window.clear();
-                            difficulty.draw(window);
-                            window.display();
+                        {   
+                                switch (event.type)
+                                {
+                                case sf::Event::MouseMoved:
+                                    difficulty.MouseMove(mouse_pos);
+                                    break;
+                                case sf::Event::MouseButtonPressed:
+                                    switch (event.key.code)
+                                    {
 
+                                    case sf::Mouse::Left:
+                                    case sf::Keyboard::Enter:
+                                        switch (difficulty.GetPressedItem())
+                                        {
+                                        case 0:
+                                            std::cout << "Wybrano latwy" << std::endl;
+                                            break;
+                                        case 1:
+                                            std::cout << "Wybrano sredni" << std::endl;
+                                            break;
+                                        case 2:
+                                            std::cout << "Wybrano trudny" << std::endl;
+                                            break;
+                                        }
+                                    }
+                                    window.clear();
+                                    difficulty.draw(window);
+                                    window.display();
+                                }
                         }
                         break;
                     case 1:

@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include "IEntity.h"
 #include "Bullet_b.h"
 
@@ -17,4 +17,4 @@ public:
 
 	virtual void shoot(IEntity* tower);
 	
-};
+};*/

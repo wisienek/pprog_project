@@ -1,22 +1,26 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "SFML/Graphics/Sprite.hpp"
-#include "Menu.h"
-#define MAX_NUMBER_OF_ITEMS 6
+#define MAX_NUMBER_OF_ITEMS 3
 
 class Difficulty
-	:public Menu
 {
 public:
 
+	Difficulty();
 	Difficulty(float width, float height);
-
 	~Difficulty();
-	void draw(sf::RenderWindow& window);
 
+	void draw(sf::RenderWindow& window);
+	void MoveUp();
 	void MoveDown();
 
+	int GetPressedItem() { return selectedItemIndex; }
+	void MouseMove(sf::Vector2i mouse_pos);
+
 private:
+	sf::Text menu[MAX_NUMBER_OF_ITEMS];
 	sf::Text title;
-	sf::Text menu[3];
+	int selectedItemIndex;
+	sf::Font font;
 };

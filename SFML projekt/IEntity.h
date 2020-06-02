@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 #include "Bullet_b.h"
@@ -15,12 +15,12 @@ protected:
 	float view; //Jaki ma zasiêg widzenia
 	int recoil; //Co ile sekund mo¿e strzelaæ
 	sf::RectangleShape shape;
-
-	Bullet_b *b;
+	Bullet_b* b;
 
 public:
+
 	IEntity();
-	virtual ~IEntity();
+	~IEntity();
 
 	int getId() {
 		return id;
@@ -32,8 +32,9 @@ public:
 
 	//Renderuj i poruszaj
 	void move(const float x, const float y);
-	virtual void render(sf::RenderTarget& target) = 0;
-	virtual void shoot(IEntity* tower) = 0;
+	void render(sf::RenderTarget& target);
+	void shoot(IEntity* tower);
 
 };
 
+*/
