@@ -3,20 +3,20 @@
 
 Menu::Menu(float width, float height)
 {
-	if (!font.loadFromFile("lunchds.ttf"))
+	if (!font.loadFromFile("lunchds.ttf")) //³adowanie czcionki i obs³uga b³êdu o jej braku
 	{
 		std::cout << "Brak czcionki" << std::endl;
 	}
 
-	logotexture.loadFromFile("zsk.png");
-	logo.setTexture(logotexture);
-	logo.setScale(0.5, 0.5);
-	logo.setPosition(sf::Vector2f(100,100));
+	logotexture.loadFromFile("zsk.png"); //³adowanie tekstury dla logo
+	logo.setTexture(logotexture); //ustawienie wybranej tekstury dla logo
+	logo.setScale(0.5, 0.5); //ustawienie wielkoœci logo
+	logo.setPosition(sf::Vector2f(100,100)); //ustawienie pozycji logo
 
-	menu[0].setFont(font);
-	menu[0].setFillColor(sf::Color::Red);
-	menu[0].setString("Start gry");
-	menu[0].setPosition(sf::Vector2f(width/2.5, height / (MAX_NUMBER_OF_ITEMS + 1) * 1));
+	menu[0].setFont(font); //ustawienie czcionki dla tekstu w menu
+	menu[0].setFillColor(sf::Color::Red); //ustawienie domyœlnego koloru tekstu
+	menu[0].setString("Start gry"); //ustawienie linijki tekstu w menu
+	menu[0].setPosition(sf::Vector2f(width/2.5, height / (MAX_NUMBER_OF_ITEMS + 1) * 1)); //ustawienie pozycji tekstu
 
 	menu[1].setFont(font);
 	menu[1].setFillColor(sf::Color::White);
@@ -43,14 +43,14 @@ Menu::Menu(float width, float height)
 	menu[5].setString("Wyjscie");
 	menu[5].setPosition(sf::Vector2f(width/2.5, height / (MAX_NUMBER_OF_ITEMS + 1) * 6));
 
-	selectedItemIndex = 0;
+	selectedItemIndex = 0; //domyœlny indeks pozycji 
 }
 
 Menu::~Menu()
 {
 }
 
-void Menu::draw(sf::RenderWindow& window)
+void Menu::draw(sf::RenderWindow& window) 
 {
 	window.draw(logo);
 	for (int i = 0; i < MAX_NUMBER_OF_ITEMS; i++)
@@ -104,20 +104,20 @@ void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i mouse
         switch (event.type)
         {
 
-        case sf::Event::Closed:
+        case sf::Event::Closed: //zamkniêcie okna za pomoc¹ 'x'
             window.close();
-        case sf::Event::MouseMoved:
+        case sf::Event::MouseMoved: //sprawdzanie ruchu mysz¹
             this->MouseMove(mouse_pos);
-        case sf::Event::MouseButtonPressed:
+        case sf::Event::MouseButtonPressed: //sprawdzanie czy przycisk myszy zosta³ wciœniêty
             switch (event.key.code)
             {
 
-            case sf::Mouse::Left:
-            case sf::Keyboard::Enter:
+            case sf::Mouse::Left: //sprawdzenie czy wciœniêtym przyciskiem by³ LPM
+            
                 switch (this->GetPressedItem())
                 {
                 case 0:
-                    std::cout << "Gra startuje" << std::endl;
+                    std::cout << "Gra startuje" << std::endl; 
                     break;
                 case 1:
                     std::cout << "Wczytywanie" << std::endl;
@@ -130,7 +130,7 @@ void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i mouse
                     break;
                 case 4:
                     std::cout << "Autorzy" << std::endl;
-                    while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                    while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) //pêtla wyœwietlania autorów
                     {
                         
                         window.clear();
@@ -139,13 +139,14 @@ void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i mouse
                     }
                     break;
                 case 5:
-                    std::cout << "Wyjscie" << std::endl;
+                    std::cout << "Wyjscie" << std::endl; //opcja wyjœcia z programu w menu
                     window.close();
                     break;
                 }
             }
             break;
 
+//poruszanie siê po menu klawiatur¹
         case sf::Event::KeyReleased:
             switch (event.key.code)
             {

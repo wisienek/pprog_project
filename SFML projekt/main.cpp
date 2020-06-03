@@ -12,18 +12,19 @@
 int main()
 {
     
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "Game");
-    Menu menu(window.getSize().x, window.getSize().y);
-    Authors authors(window.getSize().x, window.getSize().y);
-    Difficulty difficulty(window.getSize().x, window.getSize().y);
+    sf::RenderWindow window(sf::VideoMode(1280, 720), "Game"); //zdefiniowanie wielkości i nazwy okna
+    Menu menu(window.getSize().x, window.getSize().y); //utowrzenie menu
+    Authors authors(window.getSize().x, window.getSize().y); //utworzenie autorów
+    Difficulty difficulty(window.getSize().x, window.getSize().y); //utworzenie poziomów trudności
 
-    while (window.isOpen())
+    while (window.isOpen()) //pętla gry
     {
 
-        sf::Vector2i mouse_pos = sf::Mouse::getPosition(window);
-        sf::Event event;
-        menu.MenuRun(window,event,mouse_pos,authors);
+        sf::Vector2i mouse_pos = sf::Mouse::getPosition(window); //przypisywanie pozycji myszy do zmiennej
+        sf::Event event; 
+        menu.MenuRun(window,event,mouse_pos,authors); //uruchomienie menu
         
+        //odświeżanie okna
         window.clear();
         menu.draw(window);
         window.display();
