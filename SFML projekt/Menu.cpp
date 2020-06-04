@@ -1,6 +1,7 @@
 #include "Menu.h"
 #include <iostream>
 
+
 Menu::Menu(float width, float height)
 {
 	if (!font.loadFromFile("lunchds.ttf")) //³adowanie czcionki i obs³uga b³êdu o jej braku
@@ -100,9 +101,10 @@ void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i mouse
 {
     while (window.pollEvent(event))
     {
-
+		
         switch (event.type)
         {
+		
 
         case sf::Event::Closed: //zamkniêcie okna za pomoc¹ 'x'
             window.close();
@@ -132,12 +134,11 @@ void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i mouse
                     std::cout << "Autorzy" << std::endl;
                     while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) //pêtla wyœwietlania autorów
                     {
-                        
-                        window.clear();
-                        authors.draw(window);
-                        window.display();
+							window.clear();
+							authors.draw(window);
+							window.display();
                     }
-                    break;
+					break;
                 case 5:
                     std::cout << "Wyjscie" << std::endl; //opcja wyjœcia z programu w menu
                     window.close();
@@ -146,52 +147,7 @@ void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i mouse
             }
             break;
 
-//poruszanie siê po menu klawiatur¹
-        case sf::Event::KeyReleased:
-            switch (event.key.code)
-            {
-            case sf::Keyboard::Up:
-                this->MoveUp();
-                break;
-
-            case sf::Keyboard::Down:
-                this->MoveDown();
-                break;
-
-            case sf::Keyboard::Return:
-                switch (this->GetPressedItem())
-                {
-                case 0:
-                    std::cout << "Gra startuje" << std::endl;
-                    window.clear();
-
-
-                    break;
-                case 1:
-                    std::cout << "Wczytywanie" << std::endl;
-                    break;
-                case 2:
-                    std::cout << "Wyniki" << std::endl;
-                    break;
-                case 3:
-                    std::cout << "Opcje" << std::endl;
-                    break;
-                case 4:
-                    std::cout << "Autorzy" << std::endl;
-                    while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-                    {
-                        window.clear();
-                        authors.draw(window);
-                        window.display();
-
-                    }
-                    break;
-                case 5:
-                    std::cout << "Wyjscie" << std::endl;
-                    window.close();
-                    break;
-                }
-            }
+        
         }
     }
 }

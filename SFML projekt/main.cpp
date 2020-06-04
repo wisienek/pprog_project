@@ -7,6 +7,7 @@
 #include "Authors.h"
 #include "Difficulty.h"
 #include "main.h"
+#include "PauseMenu.h"
 
 
 int main()
@@ -16,14 +17,14 @@ int main()
     Menu menu(window.getSize().x, window.getSize().y); //utowrzenie menu
     Authors authors(window.getSize().x, window.getSize().y); //utworzenie autorów
     Difficulty difficulty(window.getSize().x, window.getSize().y); //utworzenie poziomów trudności
-
+    PauseMenu pausemenu(window.getSize().x, window.getSize().y);
     while (window.isOpen()) //pętla gry
     {
-
+      
         sf::Vector2i mouse_pos = sf::Mouse::getPosition(window); //przypisywanie pozycji myszy do zmiennej
         sf::Event event; 
-        menu.MenuRun(window,event,mouse_pos,authors); //uruchomienie menu
         
+        menu.MenuRun(window, event, mouse_pos, authors); //uruchomienie menu
         //odświeżanie okna
         window.clear();
         menu.draw(window);
