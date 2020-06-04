@@ -24,7 +24,7 @@ int main()
         sf::Vector2i mouse_pos = sf::Mouse::getPosition(window); //przypisywanie pozycji myszy do zmiennej
         sf::Event event; 
         
-        menu.MenuRun(window, event, mouse_pos, authors); //uruchomienie menu
+        menu.MenuRun(window, event, mouse_pos, authors, difficulty); //uruchomienie menu
         //odświeżanie okna
         window.clear();
         menu.draw(window);

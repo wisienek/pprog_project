@@ -1,5 +1,6 @@
 #pragma once
 #include "Authors.h"
+#include "Difficulty.h"
 #include "SFML/Graphics.hpp"
 #include "SFML/Graphics/Sprite.hpp"
 #define MAX_NUMBER_OF_ITEMS 6
@@ -20,8 +21,8 @@ public:
 
 	int GetPressedItem() { return selectedItemIndex; } //funkcja zwracaj¹ca indeks pozycji w menu
 
-	void MouseMove(sf::Vector2i mouse_pos); //funkcja sprawdzaj¹ca po³o¿enie myszy i zmieniaj¹ca wygl¹d tekstu po najechaniu na niego
-	void MenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i mouse_pos, Authors& authors); 
+	void MouseMove(sf::Vector2i& mouse_pos); //funkcja sprawdzaj¹ca po³o¿enie myszy i zmieniaj¹ca wygl¹d tekstu po najechaniu na niego
+	void MenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos, Authors& authors, Difficulty& difficulty);
 
 private:
 	sf::Text menu[MAX_NUMBER_OF_ITEMS]; //pozycje w menu

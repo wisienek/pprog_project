@@ -16,7 +16,9 @@ public:
 	void MoveDown();
 
 	int GetPressedItem() { return selectedItemIndex; }
-	void MouseMove(sf::Vector2i mouse_pos);
+	void MouseMove(sf::Vector2i& mouse_pos);
+
+	void DifficultyRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos);
 
 private:
 	sf::Text menu[MAX_NUMBER_OF_ITEMS];

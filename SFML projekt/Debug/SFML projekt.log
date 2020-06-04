@@ -1,32 +1,17 @@
-﻿  Menu.cpp
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(20,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+﻿  Difficulty.cpp
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.cpp(14,41): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(25,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.cpp(19,41): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(30,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.cpp(24,41): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(35,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(40,41): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(45,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-  SFML projekt.vcxproj -> I:\GITHUB\repos\pprog_project\Debug\SFML projekt.exe
+  SFML projekt.vcxproj -> C:\Users\user\Documents\GitHub\pprog_project\Debug\SFML projekt.exe

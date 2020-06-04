@@ -80,7 +80,7 @@ void Menu::MoveDown()
 	}
 }
 
-void Menu::MouseMove(sf::Vector2i mouse_pos)
+void Menu::MouseMove(sf::Vector2i& mouse_pos)
 {
 	selectedItemIndex = -1;
 	sf::Vector2f mouse_pos_translated = static_cast<sf::Vector2f>(mouse_pos);
@@ -97,7 +97,7 @@ void Menu::MouseMove(sf::Vector2i mouse_pos)
 
 }
 
-void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i mouse_pos, Authors& authors)
+void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i& mouse_pos, Authors& authors, Difficulty& difficulty)
 {
     while (window.pollEvent(event))
     {
@@ -110,6 +110,7 @@ void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i mouse
             window.close();
         case sf::Event::MouseMoved: //sprawdzanie ruchu mysz¹
             this->MouseMove(mouse_pos);
+			break;
         case sf::Event::MouseButtonPressed: //sprawdzanie czy przycisk myszy zosta³ wciœniêty
             switch (event.key.code)
             {
@@ -119,7 +120,14 @@ void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i mouse
                 switch (this->GetPressedItem())
                 {
                 case 0:
-                    std::cout << "Gra startuje" << std::endl; 
+                    std::cout << "Gra startuje" << std::endl;
+					while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+					{
+						window.clear();
+						difficulty.draw(window);
+						window.display();
+						difficulty.DifficultyRun(window, event, mouse_pos);
+					}
                     break;
                 case 1:
                     std::cout << "Wczytywanie" << std::endl;

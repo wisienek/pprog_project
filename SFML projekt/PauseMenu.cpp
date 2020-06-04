@@ -48,7 +48,7 @@ void PauseMenu::draw(sf::RenderWindow& window)
 	}
 }
 
-void PauseMenu::MouseMove(sf::Vector2i mouse_pos)
+void PauseMenu::MouseMove(sf::Vector2i& mouse_pos)
 {
 	selectedItemIndex = -1;
 	sf::Vector2f mouse_pos_translated = static_cast<sf::Vector2f>(mouse_pos);
@@ -64,7 +64,7 @@ void PauseMenu::MouseMove(sf::Vector2i mouse_pos)
 	}
 }
 
-void PauseMenu::PauseMenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i mouse_pos)
+void PauseMenu::PauseMenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos)
 {
 	while (window.pollEvent(event))
 	{

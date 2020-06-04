@@ -7,7 +7,6 @@ Difficulty::Difficulty(float width, float height)
 
 	title.setFont(font);
 	title.setString("Poziom trudnosci:");
-	menu[0].setPosition(sf::Vector2f(width / 2.5, height / (MAX_NUMBER_OF_ITEMS + 1) * 1));
 
 	menu[0].setFont(font);
 	menu[0].setFillColor(sf::Color::Red);
@@ -60,18 +59,49 @@ void Difficulty::MoveDown()
 	}
 }
 
-void Difficulty::MouseMove(sf::Vector2i mouse_pos)
+void Difficulty::MouseMove(sf::Vector2i& mouse_pos)
 {
 	selectedItemIndex = -1;
 	sf::Vector2f mouse_pos_translated = static_cast<sf::Vector2f>(mouse_pos);
 	for (int i = 0; i <= 2; i++)
 		menu[i].setFillColor(sf::Color::White);
-	for (int i = 0; i <= 5; i++)
+	for (int i = 0; i <= 2; i++)
 	{
 		if (menu[i].getGlobalBounds().contains(mouse_pos_translated))
 		{
 			menu[i].setFillColor(sf::Color::Red);
 			selectedItemIndex = i;
+		}
+	}
+}
+
+void Difficulty::DifficultyRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos)
+{
+	mouse_pos = sf::Mouse::getPosition(window);
+	while (window.pollEvent(event))
+	{
+		switch (event.type)
+		{
+
+
+		case sf::Event::Closed: //zamkniêcie okna za pomoc¹ 'x'
+			window.close();
+		case sf::Event::MouseMoved: //sprawdzanie ruchu mysz¹
+			this->MouseMove(mouse_pos);
+			break;
+		case sf::Event::MouseButtonPressed: //sprawdzanie czy przycisk myszy zosta³ wciœniêty
+			switch (this->GetPressedItem())
+			{
+			case 0:
+				std::cout << "Latwy" << std::endl;
+				break;
+			case 1:
+				std::cout << "Sredni" << std::endl;
+				break;
+			case 2:
+				std::cout << "Trudny" << std::endl;
+				break;
+			}
 		}
 	}
 }
