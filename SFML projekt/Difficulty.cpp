@@ -39,25 +39,6 @@ void Difficulty::draw(sf::RenderWindow& window)
 	}
 }
 
-void Difficulty::MoveUp()
-{
-	if (selectedItemIndex - 1 >= 0)
-	{
-		menu[selectedItemIndex].setFillColor(sf::Color::White);
-		selectedItemIndex--;
-		menu[selectedItemIndex].setFillColor(sf::Color::Red);
-	}
-}
-
-void Difficulty::MoveDown()
-{
-	if (selectedItemIndex + 1 < MAX_NUMBER_OF_ITEMS)
-	{
-		menu[selectedItemIndex].setFillColor(sf::Color::White);
-		selectedItemIndex++;
-		menu[selectedItemIndex].setFillColor(sf::Color::Red);
-	}
-}
 
 void Difficulty::MouseMove(sf::Vector2i& mouse_pos)
 {

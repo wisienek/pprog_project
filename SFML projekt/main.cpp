@@ -12,7 +12,6 @@
 
 int main()
 {
-    
     sf::RenderWindow window(sf::VideoMode(1280, 720), "Game"); //zdefiniowanie wielkości i nazwy okna
     Menu menu(window.getSize().x, window.getSize().y); //utowrzenie menu
     Authors authors(window.getSize().x, window.getSize().y); //utworzenie autorów

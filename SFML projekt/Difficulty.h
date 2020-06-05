@@ -12,8 +12,7 @@ public:
 	~Difficulty();
 
 	void draw(sf::RenderWindow& window);
-	void MoveUp();
-	void MoveDown();
+	
 
 	int GetPressedItem() { return selectedItemIndex; }
 	void MouseMove(sf::Vector2i& mouse_pos);

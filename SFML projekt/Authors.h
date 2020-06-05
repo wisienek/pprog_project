@@ -10,7 +10,7 @@ public:
 	~Authors();
 
 	void draw(sf::RenderWindow& window);
-
+	void AuthorsRun(sf::RenderWindow& window, sf::Event& event);
 
 private:
 	sf::Font font;

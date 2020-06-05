@@ -1,6 +1,7 @@
 #include "Authors.h"
 #include <iostream>
 
+
 Authors::Authors(float width, float height)
 {
 	if (!font.loadFromFile("lunchds.ttf"))
@@ -50,5 +51,17 @@ void Authors::draw(sf::RenderWindow& window)
 	for (int i = 0; i < MAX_NUMBER_OF_ITEMS; i++)
 	{
 		window.draw(authors[i]);
+	}
+}
+
+void Authors::AuthorsRun(sf::RenderWindow& window, sf::Event& event)
+{
+	while (window.pollEvent(event))
+	{
+		switch (event.type)
+		{
+			case sf::Event::Closed: //zamkniêcie okna za pomoc¹ 'x'
+			window.close();
+		}
 	}
 }
