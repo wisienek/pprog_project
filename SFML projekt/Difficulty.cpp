@@ -1,9 +1,10 @@
 #include "Difficulty.h"
+#include "Game.h"
 #include <iostream>
 
 Difficulty::Difficulty(float width, float height)
 {
-	font.loadFromFile("lunchds.ttf");
+	font.loadFromFile("resources/lunchds.ttf");
 
 	title.setFont(font);
 	title.setString("Poziom trudnosci:");
@@ -59,6 +60,9 @@ void Difficulty::MouseMove(sf::Vector2i& mouse_pos)
 void Difficulty::DifficultyRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos)
 {
 	mouse_pos = sf::Mouse::getPosition(window);
+	int diff = 0;
+	Game game(window.getSize().x, window.getSize().y);
+
 	while (window.pollEvent(event))
 	{
 		switch (event.type)
@@ -74,13 +78,16 @@ void Difficulty::DifficultyRun(sf::RenderWindow& window, sf::Event& event, sf::V
 			switch (this->GetPressedItem())
 			{
 			case 0:
-				std::cout << "Latwy" << std::endl;
+				diff = 1;
+				game.Update(window, diff);
 				break;
 			case 1:
-				std::cout << "Sredni" << std::endl;
+				diff = 2;
+				game.Update(window, diff);
 				break;
 			case 2:
-				std::cout << "Trudny" << std::endl;
+				diff = 3;
+				game.Update(window, diff);
 				break;
 			}
 		}

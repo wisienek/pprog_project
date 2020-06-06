@@ -4,7 +4,7 @@
 
 Authors::Authors(float width, float height)
 {
-	if (!font.loadFromFile("lunchds.ttf"))
+	if (!font.loadFromFile("resources/lunchds.ttf"))
 	{
 		std::cout << "Brak czcionki" << std::endl;
 	}

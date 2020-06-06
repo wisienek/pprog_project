@@ -4,12 +4,12 @@
 
 Menu::Menu(float width, float height)
 {
-	if (!font.loadFromFile("lunchds.ttf")) //³adowanie czcionki i obs³uga b³êdu o jej braku
+	if (!font.loadFromFile("resources/lunchds.ttf")) //³adowanie czcionki i obs³uga b³êdu o jej braku
 	{
 		std::cout << "Brak czcionki" << std::endl;
 	}
 
-	logotexture.loadFromFile("zsk.png"); //³adowanie tekstury dla logo
+	logotexture.loadFromFile("resources/zsk.png"); //³adowanie tekstury dla logo
 	logo.setTexture(logotexture); //ustawienie wybranej tekstury dla logo
 	logo.setScale(0.5, 0.5); //ustawienie wielkoœci logo
 	logo.setPosition(sf::Vector2f(100,100)); //ustawienie pozycji logo

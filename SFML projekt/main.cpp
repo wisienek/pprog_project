@@ -8,11 +8,12 @@
 #include "Difficulty.h"
 #include "main.h"
 #include "PauseMenu.h"
+#include "Game.h"
 
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "Game"); //zdefiniowanie wielkości i nazwy okna
+    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Game", sf::Style::Fullscreen); //zdefiniowanie wielkości i nazwy okna
     Menu menu(window.getSize().x, window.getSize().y); //utowrzenie menu
     Authors authors(window.getSize().x, window.getSize().y); //utworzenie autorów
     Difficulty difficulty(window.getSize().x, window.getSize().y); //utworzenie poziomów trudności

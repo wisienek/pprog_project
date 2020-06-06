@@ -3,7 +3,7 @@
 
 PauseMenu::PauseMenu(float width, float height)
 {
-	if (!font.loadFromFile("lunchds.ttf")) //³adowanie czcionki i obs³uga b³êdu o jej braku
+	if (!font.loadFromFile("resources/lunchds.ttf")) //³adowanie czcionki i obs³uga b³êdu o jej braku
 	{
 		std::cout << "Brak czcionki" << std::endl;
 	}

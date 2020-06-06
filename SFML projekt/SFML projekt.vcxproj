@@ -182,10 +182,11 @@
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <Font Include="lunchds.ttf" />
+    <Font Include="resources\lunchds.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="zsk.png" />
+    <Image Include="resources\mapkaprog.png" />
+    <Image Include="resources\zsk.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

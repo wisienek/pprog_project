@@ -76,12 +76,15 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Font Include="lunchds.ttf">
+    <Font Include="resources\lunchds.ttf">
       <Filter>Pliki zasobów</Filter>
     </Font>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="zsk.png">
+    <Image Include="resources\mapkaprog.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\zsk.png">
       <Filter>Pliki zasobów</Filter>
     </Image>
   </ItemGroup>
