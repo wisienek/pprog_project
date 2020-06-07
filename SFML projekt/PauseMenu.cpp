@@ -66,40 +66,45 @@ void PauseMenu::MouseMove(sf::Vector2i& mouse_pos)
 
 void PauseMenu::PauseMenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos)
 {
-	while (window.pollEvent(event))
-	{
+	mouse_pos = sf::Mouse::getPosition(window);
 
-		switch (event.type)
+		while (window.pollEvent(event))
 		{
+			window.clear();
+			draw(window);
+			window.display();
 
-		case sf::Event::Closed: //zamkniêcie okna za pomoc¹ 'x'
-			window.close();
-		case sf::Event::MouseMoved: //sprawdzanie ruchu mysz¹
-			this->MouseMove(mouse_pos);
-		case sf::Event::MouseButtonPressed: //sprawdzanie czy przycisk myszy zosta³ wciœniêty
-			switch (event.key.code)
+			switch (event.type)
 			{
 
-			case sf::Mouse::Left: //sprawdzenie czy wciœniêtym przyciskiem by³ LPM
-
-				switch (this->GetPressedItem())
+			case sf::Event::Closed: //zamkniêcie okna za pomoc¹ 'x'
+				window.close();
+			case sf::Event::MouseMoved: //sprawdzanie ruchu mysz¹
+				this->MouseMove(mouse_pos);
+			case sf::Event::MouseButtonPressed: //sprawdzanie czy przycisk myszy zosta³ wciœniêty
+				switch (event.key.code)
 				{
-				case 0:
-					std::cout << "Wznawianie" << std::endl;
-					break;
-				case 1:
-					std::cout << "Zapisywanie" << std::endl;
-					break;
-				case 2:
-					std::cout << "Restart" << std::endl;
-					break;
-				case 3:
-					std::cout << "Wyjscie" << std::endl;
-					break;
-				}
-			}
-			break;
-		}
 
-	}
+				case sf::Mouse::Left: //sprawdzenie czy wciœniêtym przyciskiem by³ LPM
+
+					switch (this->GetPressedItem())
+					{
+					case 0:
+						std::cout << "Wznawianie" << std::endl;
+						break;
+					case 1:
+						std::cout << "Zapisywanie" << std::endl;
+						break;
+					case 2:
+						std::cout << "Restart" << std::endl;
+						break;
+					case 3:
+						std::cout << "Wyjscie" << std::endl;
+						break;
+					}
+				}
+				break;
+			}
+
+		}
 }

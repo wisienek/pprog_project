@@ -2,6 +2,7 @@
 #include <iostream>
 #include "SFML/Graphics.hpp"
 #include "SFML/Graphics/Sprite.hpp"
+#include "PauseMenu.h"
 
 Game::Game(float width, float height)
 {
@@ -15,17 +16,23 @@ Game::~Game()
 
 }
 
-void Game::Update(sf::RenderWindow& window , int _diff)
+void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mouse_pos, int _diff)
 {
+    sf::Clock clock;
+    mouse_pos = sf::Mouse::getPosition(window);
+    PauseMenu pausemenu(window.getSize().x, window.getSize().y);
     while (window.isOpen())
     {
-        std::cout << "Dziala";
-        window.clear();
-        window.draw(map);
-        window.display();
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+        while (window.pollEvent(event))
         {
-            window.close();
+            timer = clock.getElapsedTime();
+            window.clear();
+            window.draw(map);
+            window.display();
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+            {
+                pausemenu.PauseMenuRun(window, event, mouse_pos);
+            }
         }
     }
 }

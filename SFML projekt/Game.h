@@ -15,7 +15,7 @@ class Game
 public:
     Game(float width, float height);
     ~Game();
-    void Update(sf::RenderWindow& window, int _diff);
+    void Update(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos, int _diff);
 
 };
 

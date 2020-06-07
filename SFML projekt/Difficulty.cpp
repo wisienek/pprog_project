@@ -79,15 +79,15 @@ void Difficulty::DifficultyRun(sf::RenderWindow& window, sf::Event& event, sf::V
 			{
 			case 0:
 				diff = 1;
-				game.Update(window, diff);
+				game.Update(window, event, mouse_pos, diff);
 				break;
 			case 1:
 				diff = 2;
-				game.Update(window, diff);
+				game.Update(window, event, mouse_pos, diff);
 				break;
 			case 2:
 				diff = 3;
-				game.Update(window, diff);
+				game.Update(window, event, mouse_pos, diff);
 				break;
 			}
 		}

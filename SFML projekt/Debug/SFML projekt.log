@@ -1,2 +1,47 @@
-﻿  Game.cpp
+﻿  PauseMenu.cpp
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\PauseMenu.cpp(13,63): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\PauseMenu.cpp(13,39): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\PauseMenu.cpp(18,46): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\PauseMenu.cpp(23,69): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\PauseMenu.cpp(23,46): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\PauseMenu.cpp(28,69): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\PauseMenu.cpp(28,46): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\PauseMenu.cpp(33,69): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\PauseMenu.cpp(33,46): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
   SFML projekt.vcxproj -> C:\Users\user\Documents\GitHub\pprog_project\Debug\SFML projekt.exe
