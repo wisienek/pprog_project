@@ -87,5 +87,8 @@
     <Image Include="resources\zsk.png">
       <Filter>Pliki zasobów</Filter>
     </Image>
+    <Image Include="resources\bg.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
   </ItemGroup>
 </Project>

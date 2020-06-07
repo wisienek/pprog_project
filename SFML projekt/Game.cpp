@@ -18,6 +18,7 @@ Game::~Game()
 
 void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mouse_pos, int _diff)
 {
+    int menuitem = -1;
     sf::Clock clock;
     mouse_pos = sf::Mouse::getPosition(window);
     PauseMenu pausemenu(window.getSize().x, window.getSize().y);
@@ -31,8 +32,18 @@ void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mou
             window.display();
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             {
-                pausemenu.PauseMenuRun(window, event, mouse_pos);
+                while (window.isOpen())
+                {
+                    menuitem = pausemenu.PauseMenuRun(window, event, mouse_pos);
+                    if (menuitem != 0)
+                    {
+                        break;
+                    }
+                }
             }
+            
         }
+        if (menuitem == 4)
+            break;
     }
 }

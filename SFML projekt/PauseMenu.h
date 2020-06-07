@@ -17,8 +17,10 @@ public:
 
 	void MouseMove(sf::Vector2i& mouse_pos); //funkcja sprawdzaj¹ca po³o¿enie myszy i zmieniaj¹ca wygl¹d tekstu po najechaniu na niego
 
-	void PauseMenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos);
+	int PauseMenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos);
 private:
+	sf::Texture bgtexture;
+	sf::Sprite bg;
 	sf::Text pausemenu[4]; //pozycje w menu
 	sf::Text title;
 	int selectedItemIndex; //indeks wybranej pozycji w menu

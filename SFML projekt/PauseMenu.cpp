@@ -7,6 +7,12 @@ PauseMenu::PauseMenu(float width, float height)
 	{
 		std::cout << "Brak czcionki" << std::endl;
 	}
+
+	bgtexture.loadFromFile("resources/bg.jpg");
+	bg.setTexture(bgtexture);
+	bg.setPosition(600, 100);
+	bg.setScale(0.5, 0.7);
+
 	title.setFont(font);
 	title.setFillColor(sf::Color::White);
 	title.setString("PAUZA");
@@ -41,6 +47,7 @@ PauseMenu::~PauseMenu()
 
 void PauseMenu::draw(sf::RenderWindow& window)
 {
+	window.draw(bg);
 	window.draw(title);
 	for (int i = 0; i < 4; i++)
 	{
@@ -64,13 +71,13 @@ void PauseMenu::MouseMove(sf::Vector2i& mouse_pos)
 	}
 }
 
-void PauseMenu::PauseMenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos)
+int PauseMenu::PauseMenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos)
 {
 	mouse_pos = sf::Mouse::getPosition(window);
 
 		while (window.pollEvent(event))
 		{
-			window.clear();
+			
 			draw(window);
 			window.display();
 
@@ -91,7 +98,7 @@ void PauseMenu::PauseMenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vec
 					{
 					case 0:
 						std::cout << "Wznawianie" << std::endl;
-						break;
+						return this->GetPressedItem()+1;
 					case 1:
 						std::cout << "Zapisywanie" << std::endl;
 						break;
@@ -100,6 +107,7 @@ void PauseMenu::PauseMenuRun(sf::RenderWindow& window, sf::Event& event, sf::Vec
 						break;
 					case 3:
 						std::cout << "Wyjscie" << std::endl;
+						return this->GetPressedItem() + 1;
 						break;
 					}
 				}

@@ -185,6 +185,7 @@
     <Font Include="resources\lunchds.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="resources\bg.jpg" />
     <Image Include="resources\mapkaprog.png" />
     <Image Include="resources\zsk.png" />
   </ItemGroup>
