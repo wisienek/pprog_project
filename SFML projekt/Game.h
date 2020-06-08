@@ -1,6 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "SFML/Graphics/Sprite.hpp"
+#include "Enemy.h"
 
 class Game
 {

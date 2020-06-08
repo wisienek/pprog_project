@@ -44,7 +44,7 @@ public:
 
 
 	sf::Vector2f getPos() {
-		return shape.getPosition();
+		return sprite.getPosition();
 	}
 
 	//Renderuj i poruszaj

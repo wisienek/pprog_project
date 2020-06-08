@@ -3,11 +3,10 @@
 
 Enemy::Enemy(std::string type) {
 	this->team = 0;
-	//do ka¿dego zmieñ sprity
 	if (type == "Tank") {
 		this->hp = 200;
-		this->shape.setSize(sf::Vector2f(80.f, 80.f));
-		//this->shape.setTexture(loadFromFile("resources/3_ORK.png"));
+		this->texture.loadFromFile("resources/enemies/3_ORK.png");
+		this->sprite.setTexture(texture);
 		this->mvspeed = 35.f;
 		this->armour = 120;
 		this->b_dmg = 40;
@@ -15,8 +14,8 @@ Enemy::Enemy(std::string type) {
 	}
 	else if (type == "Sniper") {
 		this->hp = 80;
-		this->shape.setSize(sf::Vector2f(50.f, 50.f));
-		//this->shape.setTexture(loadFromFile("resources/2_ORK.png"));
+		this->texture.loadFromFile("resources/enemies/2_ORK.png");
+		this->sprite.setTexture(texture);
 		this->mvspeed = 40.f;
 		this->armour = 20;
 		this->b_dmg = 50;
@@ -24,8 +23,8 @@ Enemy::Enemy(std::string type) {
 	}
 	else {
 		this->hp = 100;
-		this->shape.setSize(sf::Vector2f(60.f, 60.f));
-		//this->shape.setTexture(loadFromFile("resources/1_ORK.png"));
+		this->texture.loadFromFile("resources/enemies/1_ORK.png");
+		this->sprite.setTexture(texture);
 		this->mvspeed = 65.f;
 		this->armour = 70;
 	}
