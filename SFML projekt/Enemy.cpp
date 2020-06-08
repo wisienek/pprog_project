@@ -1,47 +1,33 @@
-/*#include "Enemy.h"
-#include "Bullet_b.h"
+#include "Enemy.h"
 
 
 Enemy::Enemy( std::string type ){
+	this->team = 0;
+	//do ka¿dego zmieñ sprity
 	if (type == "Tank") {
 		this->hp = 200;
 		this->shape.setSize(sf::Vector2f(80.f, 80.f));
+		//this->shape.setTexture(loadFromFile("resources/3_ORK.png"));
 		this->mvspeed = 35.f;
 		this->armour = 120;
-		this->view = 35.f;
-		this->b->setAttr(50,false,100);
-		this->recoil = 6;
+		this->b_dmg = 40;
+		this->pen = false;
 	}
 	else if (type == "Sniper") {
 		this->hp = 80;
 		this->shape.setSize(sf::Vector2f(50.f, 50.f));
+		//this->shape.setTexture(loadFromFile("resources/2_ORK.png"));
 		this->mvspeed = 40.f;
 		this->armour = 20;
-		this->view = 60.f;
-		this->b->setAttr(40, true, 130);
-		this->recoil = 4;
+		this->b_dmg = 50;
+		this->pen = false;
 	}
-	else if (type == "Normal") {
+	else {
 		this->hp = 100;
 		this->shape.setSize(sf::Vector2f(60.f, 60.f));
+		//this->shape.setTexture(loadFromFile("resources/1_ORK.png"));
 		this->mvspeed = 65.f;
 		this->armour = 70;
-		this->view = 25.f;
-	}
-	else{
-		//minion
-		this->hp = 20;
-		this->shape.setSize(sf::Vector2f(40.f, 40.f));
-		this->mvspeed = 65.f;
-		this->armour = 5;
-		this->view = 15.f;
-		this->recoil = 5;
 	}
 }
 Enemy::~Enemy() { delete this; }
-
-void Enemy::shoot(IEntity* tower) {
-	b -> render(); //Stwórz pocisk
-	sf::Vector2f v = tower->getPos(); //Pobierz pozycje przeciwnika
-	b->move(v.x, v.y); //Rusz pocisk na przeciwnika
-}*/
