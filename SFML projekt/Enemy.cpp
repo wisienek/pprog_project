@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "Enemy.h"
+=======
+/*#include "Enemy.h"
+>>>>>>> parent of f059e46... wieże
 =======
 /*#include "Enemy.h"
 >>>>>>> parent of f059e46... wieże
@@ -31,6 +35,18 @@ Enemy::Enemy( std::string type ){
 		this->mvspeed = 65.f;
 		this->armour = 70;
 		this->view = 25.f;
+<<<<<<< HEAD
+=======
+	}
+	else{
+		//minion
+		this->hp = 20;
+		this->shape.setSize(sf::Vector2f(40.f, 40.f));
+		this->mvspeed = 65.f;
+		this->armour = 5;
+		this->view = 15.f;
+		this->recoil = 5;
+>>>>>>> parent of f059e46... wieże
 	}
 	else{
 		//minion
@@ -50,6 +66,16 @@ void Enemy::shoot(IEntity* tower) {
 	b->move(v.x, v.y); //Rusz pocisk na przeciwnika
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
+}*/
+>>>>>>> parent of f059e46... wieże
+=======
+Enemy::~Enemy() { delete this; }
+
+void Enemy::shoot(IEntity* tower) {
+	b -> render(); //Stw�rz pocisk
+	sf::Vector2f v = tower->getPos(); //Pobierz pozycje przeciwnika
+	b->move(v.x, v.y); //Rusz pocisk na przeciwnika
 }*/
 >>>>>>> parent of f059e46... wieże
