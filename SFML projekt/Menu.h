@@ -1,6 +1,7 @@
 #pragma once
 #include "Authors.h"
 #include "Difficulty.h"
+#include "EndScreen.h"
 #include "SFML/Graphics.hpp"
 #include "SFML/Graphics/Sprite.hpp"
 #define MAX_NUMBER_OF_ITEMS 6

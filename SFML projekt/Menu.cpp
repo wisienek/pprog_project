@@ -77,7 +77,8 @@ void Menu::MouseMove(sf::Vector2i& mouse_pos)
 
 }
 
-void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i& mouse_pos, Authors& authors, Difficulty& difficulty)
+void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i& mouse_pos, Authors& authors, Difficulty& difficulty
+)
 {
     while (window.pollEvent(event))
     {
@@ -111,7 +112,8 @@ void Menu::MenuRun(sf::RenderWindow& window,sf::Event& event, sf::Vector2i& mous
                     break;
                 case 1:
                     std::cout << "Wczytywanie" << std::endl;
-                    break;
+					
+					break;
                 case 2:
                     std::cout << "Wyniki" << std::endl;
                     break;
