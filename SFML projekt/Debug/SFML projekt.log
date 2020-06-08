@@ -1,49 +1,12 @@
-﻿  PauseMenu.cpp
-I:\GITHUB\repos\pprog_project\SFML projekt\PauseMenu.cpp(14,22): warning C4305: "argument": obcięcie z "double" do "float"
-I:\GITHUB\repos\pprog_project\SFML projekt\PauseMenu.cpp(19,63): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+﻿  Game.cpp
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(49,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
-              T=float
+              T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\PauseMenu.cpp(19,39): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(49,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
-              T=float
+              T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\PauseMenu.cpp(24,46): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\PauseMenu.cpp(29,69): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\PauseMenu.cpp(29,46): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\PauseMenu.cpp(34,69): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\PauseMenu.cpp(34,46): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\PauseMenu.cpp(39,69): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\PauseMenu.cpp(39,46): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\PauseMenu.cpp(118): warning C4715: "PauseMenu::PauseMenuRun”: niewszystkie ścieżki kodu zwracają wartość
-  SFML projekt.vcxproj -> I:\GITHUB\repos\pprog_project\Debug\SFML projekt.exe
+  SFML projekt.vcxproj -> C:\Users\user\Documents\GitHub\pprog_project\Debug\SFML projekt.exe

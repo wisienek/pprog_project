@@ -4,6 +4,7 @@
 
 class Game
 {
+    sf::Font font;
     sf::Texture mapTexture;
     sf::Sprite map;
     sf::Time timer; // pokazuje ile minê³o czasu w sekundach od startu meczu
@@ -11,6 +12,11 @@ class Game
     int roundPoints; //Max pkt za rundê
     int diff; //trudnoœæ
     int gold;
+    float pointsconverter;
+    sf::Text goldtext;
+    std::string goldstring;
+    sf::Text timertext;
+    std::string timerstring;
 
 public:
     Game(float width, float height);
