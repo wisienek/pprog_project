@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 #include "Bullet_b.h"
@@ -37,3 +37,7 @@ public:
 
 };
 
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> parent of f059e46... wieże

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #include "Enemy.h"
+=======
+/*#include "Enemy.h"
+>>>>>>> parent of f059e46... wieże
 #include "Bullet_b.h"
 
 
@@ -44,4 +48,8 @@ void Enemy::shoot(IEntity* tower) {
 	b -> render(); //Stw�rz pocisk
 	sf::Vector2f v = tower->getPos(); //Pobierz pozycje przeciwnika
 	b->move(v.x, v.y); //Rusz pocisk na przeciwnika
+<<<<<<< HEAD
 }
+=======
+}*/
+>>>>>>> parent of f059e46... wieże

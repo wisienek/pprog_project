@@ -11,8 +11,8 @@ class Game
     int points; // ogólne pkt wszystkie
     int roundPoints; //Max pkt za rundê
     int diff; //trudnoœæ
-    int gold; // z³oto
-    float pointsconverter; // mno¿nik pkt
+    int gold;
+    float pointsconverter;
     sf::Text goldtext;
     std::string goldstring;
     sf::Text timertext;
