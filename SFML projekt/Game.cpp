@@ -45,10 +45,12 @@ void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mou
     }
     int menuitem = -1;
     sf::Clock clock;
-    mouse_pos = sf::Mouse::getPosition(window);
+    
+    
     PauseMenu pausemenu(window.getSize().x, window.getSize().y);
     while (window.isOpen())
     {
+        
         timer = clock.getElapsedTime();
         goldstring = ("Zloto: " + std::to_string(gold));
         goldtext.setString(goldstring);
@@ -61,6 +63,8 @@ void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mou
         window.display();
         while (window.pollEvent(event))
         {
+            mouse_pos = sf::Mouse::getPosition(window);
+            std::cout << mouse_pos.x << " " << mouse_pos.y << std::endl;
 
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             {
