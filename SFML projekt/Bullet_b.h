@@ -26,8 +26,13 @@ public:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 void render(); //renderuj przy starcie
 	 void update(); //Co sekundê/tick rób coœ 
+=======
+	virtual void render() = 0; //renderuj przy starcie
+	virtual void update() = 0; //Co sekundê/tick rób coœ 
+>>>>>>> parent of f059e46... wieÅ¼e
 =======
 	virtual void render() = 0; //renderuj przy starcie
 	virtual void update() = 0; //Co sekundê/tick rób coœ 
