@@ -1,8 +1,6 @@
 ﻿#pragma once
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
-#include "Bullet_b.h"
-
 static int count = 0;
 
 class IEntity
@@ -18,7 +16,8 @@ protected:
 	int b_dmg; //dmg ile bije
 	bool pen; //czy dmg penetruje tarcze
 	int team; // 0-przeciwnik, 1-gracz
-	sf::RectangleShape shape;
+	sf::Texture texture;
+	sf::Sprite sprite;
 
 public:
 
