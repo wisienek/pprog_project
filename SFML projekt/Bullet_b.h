@@ -1,5 +1,5 @@
 #pragma once
-/*#include <SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include "IEntity.h"
 
 class Bullet_b
@@ -23,8 +23,8 @@ public:
 		mvspeed = _mvsp;
 	}
 
-	virtual void render() = 0; //renderuj przy starcie
-	virtual void update() = 0; //Co sekundê/tick rób coœ 
+	 void render(); //renderuj przy starcie
+	 void update(); //Co sekundê/tick rób coœ 
 	void move(const float x, const float y); //Poruszaj
-};*/
+};
 

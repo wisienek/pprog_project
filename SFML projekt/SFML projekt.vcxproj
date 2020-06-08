@@ -188,6 +188,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\bg.jpg" />
+    <Image Include="resources\enemies\1_ORK.png" />
+    <Image Include="resources\enemies\2_ORK.png" />
+    <Image Include="resources\enemies\3_ORK.png" />
     <Image Include="resources\inputbox.png" />
     <Image Include="resources\mapkaprog.png" />
     <Image Include="resources\zsk.png" />

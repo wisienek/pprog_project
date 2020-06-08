@@ -1,4 +1,4 @@
-/*#include "Enemy.h"
+#include "Enemy.h"
 #include "Bullet_b.h"
 
 
@@ -44,4 +44,4 @@ void Enemy::shoot(IEntity* tower) {
 	b -> render(); //Stwórz pocisk
 	sf::Vector2f v = tower->getPos(); //Pobierz pozycje przeciwnika
 	b->move(v.x, v.y); //Rusz pocisk na przeciwnika
-}*/
+}

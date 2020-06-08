@@ -1,96 +1,64 @@
-﻿  main.cpp
-I:\GITHUB\repos\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
-I:\GITHUB\repos\pprog_project\SFML projekt\Authors.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
-I:\GITHUB\repos\pprog_project\SFML projekt\EndScreen.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
-I:\GITHUB\repos\pprog_project\SFML projekt\Difficulty.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
-I:\GITHUB\repos\pprog_project\SFML projekt\EndScreen.h(7): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(18,51): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+﻿  Enemy.cpp
+  main.cpp
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Authors.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\EndScreen.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Menu.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\EndScreen.h(7): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(18,51): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(18,31): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(18,31): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(19,57): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(19,57): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(19,37): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(19,37): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(20,63): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(20,63): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(20,43): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(20,43): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(21,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(21,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(21,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(21,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(22,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(22,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(22,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(22,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
-          ]
-  Menu.cpp
-I:\GITHUB\repos\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
-I:\GITHUB\repos\pprog_project\SFML projekt\Authors.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
-I:\GITHUB\repos\pprog_project\SFML projekt\EndScreen.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
-I:\GITHUB\repos\pprog_project\SFML projekt\Difficulty.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
-I:\GITHUB\repos\pprog_project\SFML projekt\EndScreen.h(7): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(20,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(25,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(30,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(35,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(40,41): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(45,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
-          with
-          [
-              T=float
           ]
   Generowanie kodu...
-  SFML projekt.vcxproj -> I:\GITHUB\repos\pprog_project\Debug\SFML projekt.exe
+Enemy.obj : error LNK2019: nierozpoznany zewnętrzny symbol "public: void __thiscall Bullet_b::render(void)" (?render@Bullet_b@@QAEXXZ) przywołany w funkcji "public: void __thiscall Enemy::shoot(class IEntity *)" (?shoot@Enemy@@QAEXPAVIEntity@@@Z)
+Enemy.obj : error LNK2019: nierozpoznany zewnętrzny symbol "public: void __thiscall Bullet_b::move(float,float)" (?move@Bullet_b@@QAEXMM@Z) przywołany w funkcji "public: void __thiscall Enemy::shoot(class IEntity *)" (?shoot@Enemy@@QAEXPAVIEntity@@@Z)
+Enemy.obj : error LNK2019: nierozpoznany zewnętrzny symbol "public: __thiscall IEntity::IEntity(void)" (??0IEntity@@QAE@XZ) przywołany w funkcji "public: __thiscall Enemy::Enemy(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Enemy@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+Enemy.obj : error LNK2019: nierozpoznany zewnętrzny symbol "public: __thiscall IEntity::~IEntity(void)" (??1IEntity@@QAE@XZ) przywołany w funkcji __unwindfunclet$??0Enemy@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z$1
+C:\Users\user\Documents\GitHub\pprog_project\Debug\SFML projekt.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 4
