@@ -108,5 +108,14 @@
     <Image Include="resources\enemies\3_ORK.png">
       <Filter>Pliki zasobów</Filter>
     </Image>
+    <Image Include="resources\towers\1_tower.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\towers\2_tower.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\towers\3_tower.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
   </ItemGroup>
 </Project>

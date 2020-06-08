@@ -193,6 +193,9 @@
     <Image Include="resources\enemies\3_ORK.png" />
     <Image Include="resources\inputbox.png" />
     <Image Include="resources\mapkaprog.png" />
+    <Image Include="resources\towers\1_tower.png" />
+    <Image Include="resources\towers\2_tower.png" />
+    <Image Include="resources\towers\3_tower.png" />
     <Image Include="resources\zsk.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
