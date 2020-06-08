@@ -3,8 +3,11 @@
 class SpawnPoint
 {
 public:
+	float x;
+	float y;
+
 	SpawnPoint();
-	SpawnPoint(float x, float y);
+	SpawnPoint(float _x, float _y);
 	~SpawnPoint();
 private:
 };

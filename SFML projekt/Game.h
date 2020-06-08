@@ -2,6 +2,7 @@
 #include "SFML/Graphics.hpp"
 #include "SFML/Graphics/Sprite.hpp"
 #include "Enemy.h"
+#include "PauseMenu.h"
 
 class Game
 {
@@ -18,11 +19,15 @@ class Game
     std::string goldstring;
     sf::Text timertext;
     std::string timerstring;
+    sf::Text start;
+    sf::RectangleShape startRect;
 
 public:
     Game(float width, float height);
     ~Game();
     void Update(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos, int _diff);
+
+    void RoundRun(int& counter, sf::RenderWindow& window, sf::Clock& clock, sf::Time& timer, PauseMenu& pausemenu, sf::Vector2i& mouse_pos, sf::Text& goldtext, std::string& goldstring, sf::Text& timertext, std::string& timerstring, int& menuitem, sf::Sprite& map, sf::RectangleShape& startRect, sf::Text& start, int& gold, sf::Event& event);
 
 };
 

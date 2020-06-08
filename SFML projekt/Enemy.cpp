@@ -1,7 +1,11 @@
 ﻿#include "Enemy.h"
 
 
-Enemy::Enemy(std::string type) {
+Enemy::Enemy()
+{
+}
+
+Enemy::Enemy(std::string type, float x, float y) {
 	this->team = 0;
 	if (type == "Tank") {
 		this->hp = 200;
@@ -28,5 +32,14 @@ Enemy::Enemy(std::string type) {
 		this->mvspeed = 65.f;
 		this->armour = 70;
 	}
+	spawn.x = x;
+	spawn.y = y;
 }
 Enemy::~Enemy() { delete this; }
+
+void Enemy::SpawnEnemy(sf::RenderWindow& window)
+{
+	this->sprite.setPosition(spawn.x, spawn.y);
+	window.draw(sprite);
+	window.display();
+}
