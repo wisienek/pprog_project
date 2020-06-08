@@ -15,6 +15,7 @@
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(1920, 1080), "Game", sf::Style::Fullscreen); //zdefiniowanie wielkości i nazwy okna
+    window.setFramerateLimit(60);
     Menu menu(window.getSize().x, window.getSize().y); //utowrzenie menu
     Authors authors(window.getSize().x, window.getSize().y); //utworzenie autorów
     Difficulty difficulty(window.getSize().x, window.getSize().y); //utworzenie poziomów trudności

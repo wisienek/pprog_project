@@ -1,12 +1,12 @@
 ﻿  Game.cpp
-I:\GITHUB\repos\pprog_project\SFML projekt\Game.cpp(58,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(59,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Game.cpp(58,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(59,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-  SFML projekt.vcxproj -> I:\GITHUB\repos\pprog_project\Debug\SFML projekt.exe
+  SFML projekt.vcxproj -> C:\Users\user\Documents\GitHub\pprog_project\Debug\SFML projekt.exe

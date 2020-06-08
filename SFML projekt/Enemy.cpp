@@ -5,7 +5,24 @@ Enemy::Enemy()
 {
 }
 
-Enemy::Enemy(std::string type, float x, float y) {
+Enemy::Enemy( float x, float y) {
+	
+	
+	spawn.x = x;
+	spawn.y = y;
+}
+Enemy::~Enemy() { delete this; }
+
+void Enemy::SpawnEnemy(sf::RenderWindow& window)
+{
+	this->sprite.setPosition(spawn.x, spawn.y);
+	window.draw(sprite);
+	window.display();
+
+}
+
+void Enemy::SetType(std::string type)
+{
 	this->team = 0;
 	if (type == "Tank") {
 		this->hp = 200;
@@ -32,14 +49,6 @@ Enemy::Enemy(std::string type, float x, float y) {
 		this->mvspeed = 65.f;
 		this->armour = 70;
 	}
-	spawn.x = x;
-	spawn.y = y;
-}
-Enemy::~Enemy() { delete this; }
 
-void Enemy::SpawnEnemy(sf::RenderWindow& window)
-{
-	this->sprite.setPosition(spawn.x, spawn.y);
-	window.draw(sprite);
-	window.display();
+	sprite.setScale(0.1f, 0.1f);
 }

@@ -17,9 +17,9 @@ protected:
 	bool pen; //czy dmg penetruje tarcze
 	int team; // 0-przeciwnik, 1-gracz
 	sf::Texture texture;
-	sf::Sprite sprite;
 
 public:
+	sf::Sprite sprite;
 
 	IEntity();
 	~IEntity();

@@ -6,9 +6,10 @@ class Enemy : public IEntity {
 public:
 	SpawnPoint spawn;
 	Enemy();
-	Enemy(std::string type, float x, float y);
+	Enemy( float x, float y);
 	~Enemy();
 
 	void SpawnEnemy(sf::RenderWindow& window);
+	void SetType(std::string type);
 
 };

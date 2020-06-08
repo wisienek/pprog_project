@@ -4,6 +4,7 @@
 #include "SFML/Graphics.hpp"
 #include "SFML/Graphics/Sprite.hpp"
 #include "PauseMenu.h"
+#include <Windows.h>
 
 Game::Game(float width, float height)
 {
@@ -101,19 +102,35 @@ void Game::RoundRun(int& counter, sf::RenderWindow& window, sf::Clock& clock, sf
 {
     Enemy* opponents = new Enemy[counter];
     bool closer = false;
+    int spawnedoppcounter = 0;
     for (int i = 0; i < counter; i++)
     {
         if (closer == true)
         {
-            opponents[i].spawn.x = 1064;
+            opponents[i].spawn.x = 975;
             opponents[i].spawn.y = 70;
             closer = false;
         }
         else
         {
-            opponents[i].spawn.x = 1790;
+            opponents[i].spawn.x = 1750;
             opponents[i].spawn.y = 180;
             closer = true;
+        }
+    }
+    for (int i = 0; i < counter; i++)
+    {
+        if (i % 15 == 0)
+        {
+            opponents[i].SetType("Sniper");
+        }
+        else if (i % 5 == 0)
+        {
+            opponents[i].SetType("Tank");
+        }
+        else
+        {
+            opponents[i].SetType("Normal");
         }
     }
     mouse_pos = sf::Mouse::getPosition(window);
@@ -149,11 +166,26 @@ void Game::RoundRun(int& counter, sf::RenderWindow& window, sf::Clock& clock, sf
             }
 
         }
-        for (int i = 0; i < counter; i++)
-        {
-            opponents[i].SpawnEnemy(window);
-        }
         if (menuitem == 4)
             break;
+
+        if (spawnedoppcounter < counter)
+        {
+            opponents[spawnedoppcounter].SpawnEnemy(window);
+            spawnedoppcounter++;
+            Sleep(5000);
+        }
+        timer = clock.getElapsedTime();
+        goldstring = ("Zloto: " + std::to_string(gold));
+        goldtext.setString(goldstring);
+        timerstring = ("Czas: " + std::to_string(int(std::floor(timer.asSeconds()))));
+        timertext.setString(timerstring);
+        window.clear();
+        window.draw(map);
+        window.draw(timertext);
+        window.draw(goldtext);
+        window.draw(startRect);
+        window.draw(start);
+        window.display();
     }
 }
