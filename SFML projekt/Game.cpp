@@ -30,6 +30,7 @@ Game::~Game()
 
 void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mouse_pos, int _diff)
 {
+    int counter = 5;
     mouse_pos = sf::Mouse::getPosition(window);
     this->diff = _diff;
     switch (diff)
@@ -73,8 +74,11 @@ void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mou
         while (window.pollEvent(event))
         {
             mouse_pos = sf::Mouse::getPosition(window);
-            
-
+            sf::Vector2f mouse_pos_translated = static_cast<sf::Vector2f>(mouse_pos);
+            if (startRect.getGlobalBounds().contains(mouse_pos_translated) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                RoundRun(counter, window, clock, timer, pausemenu, mouse_pos, goldtext, goldstring, timertext, timerstring, menuitem, map, startRect, start, gold, event);
+            }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             {
                 while (window.isOpen())
