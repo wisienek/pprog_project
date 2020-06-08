@@ -41,10 +41,6 @@ public:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-*/
->>>>>>> parent of f059e46... wieże
 =======
 */
 >>>>>>> parent of f059e46... wieże

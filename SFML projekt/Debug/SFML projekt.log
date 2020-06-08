@@ -2,7 +2,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 ﻿  Enemy.cpp
   main.cpp
 C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
@@ -13,8 +12,6 @@ C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Menu.h(7,1): warning C
 C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\EndScreen.h(7): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
 C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(18,51): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
 =======
-=======
->>>>>>> parent of f059e46... wieże
 =======
 >>>>>>> parent of f059e46... wieże
 =======
@@ -37,9 +34,6 @@ I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(18,31): warning C4244: "argu
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of f059e46... wieże
-=======
 >>>>>>> parent of f059e46... wieże
 =======
 >>>>>>> parent of f059e46... wieże
@@ -51,7 +45,6 @@ I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(18,31): warning C4244: "argu
           [
               T=unsigned int
           ]
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,14 +62,10 @@ I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(19,57): warning C4244: "argu
 =======
 I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(19,57): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
 >>>>>>> parent of f059e46... wieże
-=======
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(19,57): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
->>>>>>> parent of f059e46... wieże
           with
           [
               T=unsigned int
           ]
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,14 +83,10 @@ I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(19,37): warning C4244: "argu
 =======
 I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(19,37): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
 >>>>>>> parent of f059e46... wieże
-=======
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(19,37): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
->>>>>>> parent of f059e46... wieże
           with
           [
               T=unsigned int
           ]
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,14 +104,10 @@ I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(20,63): warning C4244: "argu
 =======
 I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(20,63): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
 >>>>>>> parent of f059e46... wieże
-=======
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(20,63): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
->>>>>>> parent of f059e46... wieże
           with
           [
               T=unsigned int
           ]
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,14 +125,10 @@ I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(20,43): warning C4244: "argu
 =======
 I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(20,43): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
 >>>>>>> parent of f059e46... wieże
-=======
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(20,43): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
->>>>>>> parent of f059e46... wieże
           with
           [
               T=unsigned int
           ]
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -169,14 +146,10 @@ I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(21,61): warning C4244: "argu
 =======
 I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(21,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
 >>>>>>> parent of f059e46... wieże
-=======
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(21,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
->>>>>>> parent of f059e46... wieże
           with
           [
               T=unsigned int
           ]
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -194,14 +167,10 @@ I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(21,41): warning C4244: "argu
 =======
 I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(21,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
 >>>>>>> parent of f059e46... wieże
-=======
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(21,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
->>>>>>> parent of f059e46... wieże
           with
           [
               T=unsigned int
           ]
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,14 +188,10 @@ I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(22,61): warning C4244: "argu
 =======
 I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(22,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
 >>>>>>> parent of f059e46... wieże
-=======
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(22,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
->>>>>>> parent of f059e46... wieże
           with
           [
               T=unsigned int
           ]
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -237,9 +202,6 @@ C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(22,61): warni
               T=unsigned int
           ]
 C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\main.cpp(22,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-=======
-I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(22,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
->>>>>>> parent of f059e46... wieże
 =======
 I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(22,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
 >>>>>>> parent of f059e46... wieże
@@ -306,9 +268,6 @@ I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(45,40): warning C4244: "argu
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of f059e46... wieże
-=======
 >>>>>>> parent of f059e46... wieże
 =======
 >>>>>>> parent of f059e46... wieże
