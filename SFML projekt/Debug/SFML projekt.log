@@ -1,2 +1,12 @@
-﻿  IEntity.cpp
-  SFML projekt.vcxproj -> C:\Users\user\Documents\GitHub\pprog_project\Debug\SFML projekt.exe
+﻿  Game.cpp
+I:\GITHUB\repos\pprog_project\SFML projekt\Game.cpp(50,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\Game.cpp(50,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+  SFML projekt.vcxproj -> I:\GITHUB\repos\pprog_project\Debug\SFML projekt.exe
