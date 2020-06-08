@@ -45,6 +45,9 @@
     <ClCompile Include="PauseMenu.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="EndScreen.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IEntity.h">
@@ -74,6 +77,9 @@
     <ClInclude Include="PauseMenu.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
+    <ClInclude Include="EndScreen.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Font Include="resources\lunchds.ttf">
@@ -88,6 +94,9 @@
       <Filter>Pliki zasobów</Filter>
     </Image>
     <Image Include="resources\bg.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="resources\inputbox.png">
       <Filter>Pliki zasobów</Filter>
     </Image>
   </ItemGroup>

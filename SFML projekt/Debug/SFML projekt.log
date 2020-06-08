@@ -1,12 +1,96 @@
-﻿  Game.cpp
-C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(49,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+﻿  main.cpp
+I:\GITHUB\repos\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+I:\GITHUB\repos\pprog_project\SFML projekt\Authors.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+I:\GITHUB\repos\pprog_project\SFML projekt\EndScreen.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+I:\GITHUB\repos\pprog_project\SFML projekt\Difficulty.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+I:\GITHUB\repos\pprog_project\SFML projekt\Menu.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+I:\GITHUB\repos\pprog_project\SFML projekt\EndScreen.h(7): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(18,51): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(49,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(18,31): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-  SFML projekt.vcxproj -> C:\Users\user\Documents\GitHub\pprog_project\Debug\SFML projekt.exe
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(19,57): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(19,37): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(20,63): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(20,43): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(21,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(21,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(22,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\main.cpp(22,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+  Menu.cpp
+I:\GITHUB\repos\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+I:\GITHUB\repos\pprog_project\SFML projekt\Authors.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+I:\GITHUB\repos\pprog_project\SFML projekt\EndScreen.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+I:\GITHUB\repos\pprog_project\SFML projekt\Difficulty.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+I:\GITHUB\repos\pprog_project\SFML projekt\Menu.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+I:\GITHUB\repos\pprog_project\SFML projekt\EndScreen.h(7): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(20,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(25,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(30,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(35,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(40,41): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+I:\GITHUB\repos\pprog_project\SFML projekt\Menu.cpp(45,40): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+  Generowanie kodu...
+  SFML projekt.vcxproj -> I:\GITHUB\repos\pprog_project\Debug\SFML projekt.exe
