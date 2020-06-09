@@ -6,8 +6,6 @@ Enemy::Enemy()
 }
 
 Enemy::Enemy( float x, float y) {
-	
-	
 	spawn.x = x;
 	spawn.y = y;
 }

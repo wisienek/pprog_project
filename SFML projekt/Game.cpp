@@ -244,7 +244,12 @@ int Game::RoundRun(Tower* towers, int& towercounter, sf::RectangleShape& BaseHea
         {
             for (int e = 0; e < counter; e++)
             {
-                towers[i].CheckRange(opponents[e]);
+                if (towers[i].CheckRange(opponents[e]))
+                {
+                    gold += 100;
+                    points += 5;
+                    counter--;
+                }
             }
         }
         window.display();

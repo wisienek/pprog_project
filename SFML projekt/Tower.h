@@ -13,7 +13,7 @@ public:
 	~Tower();
 
 	void TowerBuild(sf::RenderWindow& window, sf::Vector2i& mouse_pos, sf::Event& event);
-	void CheckRange(Enemy& enemy);
-	void shot(Enemy& enemy);
+	bool CheckRange(Enemy& enemy);
+	bool shot(Enemy& enemy);
 
 };
