@@ -32,7 +32,7 @@ Game::~Game()
 
 }
 
-void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mouse_pos, int _diff)
+int Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mouse_pos, int _diff)
 {
     sf::RectangleShape BaseHealth;
     BaseHealth.setFillColor(sf::Color::Green);
@@ -84,6 +84,7 @@ void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mou
         window.draw(start);
         window.draw(roundText);
         window.display();
+        int roundexit;
         while (window.pollEvent(event))
         {
             mouse_pos = sf::Mouse::getPosition(window);
@@ -93,7 +94,9 @@ void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mou
 
                 counter += 5;
                 RoundRun(BaseHealth, counter, window, clock, timer, pausemenu, mouse_pos, goldtext, goldstring, timertext, timerstring, menuitem, map, startRect, start, gold, event);
-                          
+                roundexit = RoundRun(BaseHealth, counter, window, clock, timer, pausemenu, mouse_pos, goldtext, goldstring, timertext, timerstring, menuitem, map, startRect, start, gold, event);
+                if (roundexit == 1)
+                    return roundexit;
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             {
@@ -113,7 +116,7 @@ void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mou
     }
 }
 
-void Game::RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow& window, sf::Clock& clock, sf::Time& timer, PauseMenu& pausemenu, sf::Vector2i& mouse_pos, sf::Text& goldtext, std::string& goldstring, sf::Text& timertext, std::string& timerstring, int& menuitem, sf::Sprite& map, sf::RectangleShape& startRect, sf::Text& start, int& gold, sf::Event& event)
+int Game::RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow& window, sf::Clock& clock, sf::Time& timer, PauseMenu& pausemenu, sf::Vector2i& mouse_pos, sf::Text& goldtext, std::string& goldstring, sf::Text& timertext, std::string& timerstring, int& menuitem, sf::Sprite& map, sf::RectangleShape& startRect, sf::Text& start, int& gold, sf::Event& event)
 {
     roundscounter++;
     Enemy* opponents = new Enemy[counter];
@@ -219,13 +222,21 @@ void Game::RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindo
         window.draw(BaseHealth);
         window.draw(roundText);
         window.display();
-        while (BaseHealth.getSize().x <= 0)
+        int exitcode=0;
+        if (BaseHealth.getSize().x <= 0)
         {
-            window.clear();
             EndScreen gameover(window.getSize().x, window.getSize().y);
+            while(window.isOpen())
+            {
+                if (exitcode == 1)
+                    return exitcode;
+            
+            window.clear();
             gameover.draw(window);
             window.display();
-            gameover.EndScreenRun(window, event, mouse_pos);
+            exitcode = gameover.EndScreenRun(window, event, mouse_pos);
+            
+            }
         }
 
         if (counter == 0)
@@ -235,5 +246,6 @@ void Game::RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindo
             delete[] opponents;
             break;
         }
+       
     }
 }

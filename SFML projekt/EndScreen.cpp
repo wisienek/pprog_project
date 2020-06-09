@@ -62,20 +62,19 @@ void EndScreen::draw(sf::RenderWindow& window)
 
 void EndScreen::MouseMove(sf::Vector2i& mouse_pos)
 {
-	selectedItemIndex = -1;
 	sf::Vector2f mouse_pos_translated = static_cast<sf::Vector2f>(mouse_pos);
 	option[0].setFillColor(sf::Color::White);
 	if (option[0].getGlobalBounds().contains(mouse_pos_translated))
 	{
 		option[0].setFillColor(sf::Color::Red);
-		selectedItemIndex = 1;
 	}
 	
 }
 
-void EndScreen::EndScreenRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos)
+int EndScreen::EndScreenRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos)
 {
 	mouse_pos = sf::Mouse::getPosition(window);
+	sf::Vector2f mouse_pos_translated = static_cast<sf::Vector2f>(mouse_pos);
 	while (window.pollEvent(event))
 	{
 
@@ -106,11 +105,10 @@ void EndScreen::EndScreenRun(sf::RenderWindow& window, sf::Event& event, sf::Vec
 
 				case sf::Mouse::Left: //sprawdzenie czy wciœniêtym przyciskiem by³ LPM
 				{
-					if (this->GetPressedItem()==1)
+					if (option[0].getGlobalBounds().contains(mouse_pos_translated))
 					{
-						
 						std::cout << "Wyjscie bez zapisu" << std::endl;
-						break;
+						return 1;
 					}
 				}
 			}

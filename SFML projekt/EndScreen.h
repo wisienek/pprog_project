@@ -19,7 +19,7 @@ public:
 	int GetPressedItem() { return selectedItemIndex; } //funkcja zwracaj¹ca indeks pozycji w menu
 
 	void MouseMove(sf::Vector2i& mouse_pos); //funkcja sprawdzaj¹ca po³o¿enie myszy i zmieniaj¹ca wygl¹d tekstu po najechaniu na niego
-	void EndScreenRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos);
+	int EndScreenRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos);
 
 private:
 	sf::Text option[MAX_NUMBER_OF_ITEMS]; //pozycje w menu
