@@ -1,28 +1,28 @@
 ﻿  Game.cpp
-I:\GITHUB\repos\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
-I:\GITHUB\repos\pprog_project\SFML projekt\Authors.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
-I:\GITHUB\repos\pprog_project\SFML projekt\EndScreen.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
-I:\GITHUB\repos\pprog_project\SFML projekt\Difficulty.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
-I:\GITHUB\repos\pprog_project\SFML projekt\Game.cpp(67,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Authors.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\EndScreen.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(82,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Game.cpp(67,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(82,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Game.cpp(228,68): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(255,68): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Game.cpp(228,48): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(255,48): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-I:\GITHUB\repos\pprog_project\SFML projekt\Game.cpp(117): warning C4715: "Game::Update”: niewszystkie ścieżki kodu zwracają wartość
-I:\GITHUB\repos\pprog_project\SFML projekt\Game.cpp(251): warning C4715: "Game::RoundRun”: niewszystkie ścieżki kodu zwracają wartość
-  SFML projekt.vcxproj -> I:\GITHUB\repos\pprog_project\Debug\SFML projekt.exe
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(136): warning C4715: "Game::Update”: niewszystkie ścieżki kodu zwracają wartość
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(278): warning C4715: "Game::RoundRun”: niewszystkie ścieżki kodu zwracają wartość
+  SFML projekt.vcxproj -> C:\Users\user\Documents\GitHub\pprog_project\Debug\SFML projekt.exe

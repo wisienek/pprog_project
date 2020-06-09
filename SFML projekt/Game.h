@@ -23,6 +23,10 @@ class Game
     sf::RectangleShape startRect;
     int roundscounter;
     sf::Text roundText;
+    sf::Texture towers[3];
+    sf::Sprite towersSprite[3];
+    sf::Text shopText;
+    sf::Text prizes;
 
 public:
     Game(float width, float height);

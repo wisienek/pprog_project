@@ -9,6 +9,15 @@
 
 Game::Game(float width, float height)
 {
+    towers[0].loadFromFile("resources/towers/1_tower.png");
+    towers[1].loadFromFile("resources/towers/2_tower.png");
+    towers[2].loadFromFile("resources/towers/3_tower.png");
+    towersSprite[0].setTexture(towers[0]);
+    towersSprite[1].setTexture(towers[1]);
+    towersSprite[2].setTexture(towers[2]);
+    towersSprite[0].setPosition(383, 926);
+    towersSprite[1].setPosition(511, 926);
+    towersSprite[2].setPosition(639, 926);
     mapTexture.loadFromFile("resources/mapkaprog.png");
     map.setTexture(mapTexture);
     map.setPosition(0, 0);
@@ -26,6 +35,12 @@ Game::Game(float width, float height)
     startRect.setPosition(0, 1040);
     roundscounter = 0;
     roundText.setFont(font);
+    shopText.setFont(font);
+    shopText.setString("Sklep:");
+    shopText.setPosition(403, 890);
+    prizes.setFont(font);
+    prizes.setString("500     750     1000");
+    prizes.setPosition(410, 1044);
 }
 Game::~Game() 
 {
@@ -77,12 +92,16 @@ int Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mous
         roundText.setPosition(1404, 10);
         window.clear();
         window.draw(map);
+        for (int i = 0; i < 3; i++)
+            window.draw(towersSprite[i]);
         window.draw(timertext);
         window.draw(goldtext);
         window.draw(startRect);
         window.draw(BaseHealth);
         window.draw(start);
         window.draw(roundText);
+        window.draw(shopText);
+        window.draw(prizes);
         window.display();
         int roundexit;
         while (window.pollEvent(event))
@@ -170,12 +189,16 @@ int Game::RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow
         {
             opponents[i].OppMove(window, BaseHealth, counter);
         }
+        for (int i = 0; i < 3; i++)
+            window.draw(towersSprite[i]);
         window.draw(timertext);
         window.draw(goldtext);
         window.draw(startRect);
         window.draw(start);
         window.draw(BaseHealth);
         window.draw(roundText);
+        window.draw(shopText);
+        window.draw(prizes);
         window.display();
         while (window.pollEvent(event))
         {
@@ -215,12 +238,16 @@ int Game::RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow
         {
             opponents[i].OppMove(window, BaseHealth, counter);
         }
+        for (int i = 0; i < 3; i++)
+            window.draw(towersSprite[i]);
         window.draw(timertext);
         window.draw(goldtext);
         window.draw(startRect);
         window.draw(start);
         window.draw(BaseHealth);
         window.draw(roundText);
+        window.draw(shopText);
+        window.draw(prizes);
         window.display();
         int exitcode=0;
         if (BaseHealth.getSize().x <= 0)

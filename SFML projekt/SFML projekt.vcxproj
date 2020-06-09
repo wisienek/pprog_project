@@ -166,6 +166,7 @@
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="PauseMenu.cpp" />
     <ClCompile Include="SpawnPoint.cpp" />
+    <ClCompile Include="Tower.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Authors.h" />
@@ -180,6 +181,7 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="PauseMenu.h" />
     <ClInclude Include="SpawnPoint.h" />
+    <ClInclude Include="Tower.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
