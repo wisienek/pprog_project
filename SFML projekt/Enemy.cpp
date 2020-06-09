@@ -48,7 +48,7 @@ void Enemy::SetType(std::string type)
 		this->sprite.setTexture(texture);
 		this->mvspeed = 0.8;
 		this->armour = 70;
-		this->b_dmg = 520;
+		this->b_dmg = 20;
 	}
 
 	sprite.setScale(0.1f, 0.1f);

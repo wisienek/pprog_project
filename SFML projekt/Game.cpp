@@ -176,6 +176,7 @@ int Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mous
 
 int Game::RoundRun(Tower* towers, int& towercounter, sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow& window, sf::Clock& clock, sf::Time& timer, PauseMenu& pausemenu, sf::Vector2i& mouse_pos, sf::Text& goldtext, std::string& goldstring, sf::Text& timertext, std::string& timerstring, int& menuitem, sf::Sprite& map, sf::RectangleShape& startRect, sf::Text& start, int& gold, sf::Event& event)
 {
+    int countercopy = counter;
     roundscounter++;
     Enemy* opponents = new Enemy[counter];
     bool closer = false;
@@ -248,7 +249,7 @@ int Game::RoundRun(Tower* towers, int& towercounter, sf::RectangleShape& BaseHea
                 {
                     gold += 100;
                     points += 5;
-                    counter--;
+                    countercopy--;
                 }
             }
         }
@@ -321,7 +322,6 @@ int Game::RoundRun(Tower* towers, int& towercounter, sf::RectangleShape& BaseHea
         for (int i = 0; i < towercounter; i++)
         {
             window.draw(towers[i].sprite);
-            window.draw(towers[i].range);
         }
         for (int i = 0; i < spawnedoppcounter; i++)
         {
@@ -355,7 +355,7 @@ int Game::RoundRun(Tower* towers, int& towercounter, sf::RectangleShape& BaseHea
             }
         }
 
-        if (counter == 0)
+        if (countercopy == 0)
         {
             for (int i = 0; i < spawnedoppcounter; i++)
                 opponents[i].~Enemy();

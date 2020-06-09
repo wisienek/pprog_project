@@ -1,28 +1,35 @@
-﻿  Game.cpp
-E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
-E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Authors.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
-E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\EndScreen.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
-E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Difficulty.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
-E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Game.cpp(85,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+﻿  Enemy.cpp
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Authors.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\EndScreen.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Enemy.cpp(49,22): warning C4305: "=": obcięcie z "double" do "float"
+  Game.cpp
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.h(4,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Authors.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\EndScreen.h(7,1): warning C4005: "MAX_NUMBER_OF_ITEMS": ponowna definicja makra
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Difficulty.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_ITEMS”
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(85,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Game.cpp(85,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(85,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Game.cpp(345,68): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(344,68): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Game.cpp(345,48): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(344,48): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Game.cpp(175): warning C4715: "Game::Update”: niewszystkie ścieżki kodu zwracają wartość
-E:\projekty\programowanie\pprog_końcowy\pprog_project\SFML projekt\Game.cpp(368): warning C4715: "Game::RoundRun”: niewszystkie ścieżki kodu zwracają wartość
-  SFML projekt.vcxproj -> E:\projekty\programowanie\pprog_końcowy\pprog_project\Debug\SFML projekt.exe
+  Generowanie kodu...
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(175): warning C4715: "Game::Update”: niewszystkie ścieżki kodu zwracają wartość
+C:\Users\user\Documents\GitHub\pprog_project\SFML projekt\Game.cpp(367): warning C4715: "Game::RoundRun”: niewszystkie ścieżki kodu zwracają wartość
+  SFML projekt.vcxproj -> C:\Users\user\Documents\GitHub\pprog_project\Debug\SFML projekt.exe
