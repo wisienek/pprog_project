@@ -1,6 +1,10 @@
 ﻿#include "Tower.h"
 
 
+Tower::Tower()
+{
+}
+
 Tower::Tower(std::string type) {
 	this->team = 1;
 	if (type == "Tank") {

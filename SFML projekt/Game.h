@@ -6,6 +6,7 @@
 
 class Game
 {
+    int maxtowers = 30;
     sf::Font font;
     sf::Texture mapTexture;
     sf::Sprite map;

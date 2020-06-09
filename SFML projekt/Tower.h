@@ -4,6 +4,7 @@ class Tower : public IEntity
 {
 	sf::Texture texture;
 	sf::Sprite sprite;
+	Tower();
 	Tower(std::string type);
 	~Tower();
 

@@ -6,6 +6,7 @@
 #include "PauseMenu.h"
 #include <Windows.h>
 #include "EndScreen.h"
+#include "Tower.h"
 
 Game::Game(float width, float height)
 {
@@ -49,6 +50,8 @@ Game::~Game()
 
 int Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mouse_pos, int _diff)
 {
+
+    Tower towers[30];
     sf::RectangleShape BaseHealth;
     BaseHealth.setFillColor(sf::Color::Green);
     BaseHealth.setSize(sf::Vector2f(500, 25));
@@ -108,6 +111,12 @@ int Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mous
         {
             mouse_pos = sf::Mouse::getPosition(window);
             sf::Vector2f mouse_pos_translated = static_cast<sf::Vector2f>(mouse_pos);
+            if (towersSprite[0].getGlobalBounds().contains(mouse_pos_translated) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                Tower tower();
+
+            }
+
             if (startRect.getGlobalBounds().contains(mouse_pos_translated) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
 
