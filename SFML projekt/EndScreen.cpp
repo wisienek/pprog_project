@@ -75,6 +75,7 @@ void EndScreen::MouseMove(sf::Vector2i& mouse_pos)
 
 void EndScreen::EndScreenRun(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos)
 {
+	mouse_pos = sf::Mouse::getPosition(window);
 	while (window.pollEvent(event))
 	{
 

@@ -5,6 +5,7 @@
 #include "SFML/Graphics/Sprite.hpp"
 #include "PauseMenu.h"
 #include <Windows.h>
+#include "EndScreen.h"
 
 Game::Game(float width, float height)
 {
@@ -23,6 +24,8 @@ Game::Game(float width, float height)
     startRect.setFillColor(sf::Color::Black);
     startRect.setSize(sf::Vector2f(105, 50));
     startRect.setPosition(0, 1040);
+    roundscounter = 0;
+    roundText.setFont(font);
 }
 Game::~Game() 
 {
@@ -31,7 +34,12 @@ Game::~Game()
 
 void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mouse_pos, int _diff)
 {
-    int counter = 5;
+    sf::RectangleShape BaseHealth;
+    BaseHealth.setFillColor(sf::Color::Green);
+    BaseHealth.setSize(sf::Vector2f(500, 25));
+    BaseHealth.setScale(0.5, 1);
+    BaseHealth.setPosition(105, 1047);
+    int counter = 0;
     mouse_pos = sf::Mouse::getPosition(window);
     this->diff = _diff;
     switch (diff)
@@ -65,12 +73,16 @@ void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mou
         goldtext.setString(goldstring);
         timerstring = ("Czas: " + std::to_string(int(std::floor(timer.asSeconds()))));
         timertext.setString(timerstring);
+        roundText.setString("Runda: " + std::to_string(roundscounter));
+        roundText.setPosition(1404, 10);
         window.clear();
         window.draw(map);
         window.draw(timertext);
         window.draw(goldtext);
         window.draw(startRect);
+        window.draw(BaseHealth);
         window.draw(start);
+        window.draw(roundText);
         window.display();
         while (window.pollEvent(event))
         {
@@ -78,7 +90,10 @@ void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mou
             sf::Vector2f mouse_pos_translated = static_cast<sf::Vector2f>(mouse_pos);
             if (startRect.getGlobalBounds().contains(mouse_pos_translated) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
-                RoundRun(counter, window, clock, timer, pausemenu, mouse_pos, goldtext, goldstring, timertext, timerstring, menuitem, map, startRect, start, gold, event);
+
+                counter += 5;
+                RoundRun(BaseHealth, counter, window, clock, timer, pausemenu, mouse_pos, goldtext, goldstring, timertext, timerstring, menuitem, map, startRect, start, gold, event);
+                          
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             {
@@ -98,8 +113,9 @@ void Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mou
     }
 }
 
-void Game::RoundRun(int& counter, sf::RenderWindow& window, sf::Clock& clock, sf::Time& timer, PauseMenu& pausemenu, sf::Vector2i& mouse_pos, sf::Text& goldtext, std::string& goldstring, sf::Text& timertext, std::string& timerstring, int& menuitem, sf::Sprite& map, sf::RectangleShape& startRect, sf::Text& start, int& gold, sf::Event& event)
+void Game::RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow& window, sf::Clock& clock, sf::Time& timer, PauseMenu& pausemenu, sf::Vector2i& mouse_pos, sf::Text& goldtext, std::string& goldstring, sf::Text& timertext, std::string& timerstring, int& menuitem, sf::Sprite& map, sf::RectangleShape& startRect, sf::Text& start, int& gold, sf::Event& event)
 {
+    roundscounter++;
     Enemy* opponents = new Enemy[counter];
     bool closer = false;
     int spawnedoppcounter = 0;
@@ -107,20 +123,20 @@ void Game::RoundRun(int& counter, sf::RenderWindow& window, sf::Clock& clock, sf
     {
         if (closer == true)
         {
-            opponents[i].spawn.x = 975;
+            opponents[i].spawn.x = 839;
             opponents[i].spawn.y = 70;
             closer = false;
         }
         else
         {
-            opponents[i].spawn.x = 1750;
-            opponents[i].spawn.y = 180;
+            opponents[i].spawn.x = 1711;
+            opponents[i].spawn.y = 62;
             closer = true;
         }
     }
     for (int i = 0; i < counter; i++)
     {
-        if (i % 15 == 0)
+        if (i % 15 == 0 && i != 0)
         {
             opponents[i].SetType("Sniper");
         }
@@ -134,19 +150,29 @@ void Game::RoundRun(int& counter, sf::RenderWindow& window, sf::Clock& clock, sf
         }
     }
     mouse_pos = sf::Mouse::getPosition(window);
+    int framecounter = 120;
     while (window.isOpen())
     {
+        framecounter--;
         timer = clock.getElapsedTime();
         goldstring = ("Zloto: " + std::to_string(gold));
         goldtext.setString(goldstring);
         timerstring = ("Czas: " + std::to_string(int(std::floor(timer.asSeconds()))));
         timertext.setString(timerstring);
+        roundText.setString("Runda: " + std::to_string(roundscounter));
+        roundText.setPosition(1404, 10);
         window.clear();
         window.draw(map);
+        for (int i = 0; i < spawnedoppcounter; i++)
+        {
+            opponents[i].OppMove(window, BaseHealth, counter);
+        }
         window.draw(timertext);
         window.draw(goldtext);
         window.draw(startRect);
         window.draw(start);
+        window.draw(BaseHealth);
+        window.draw(roundText);
         window.display();
         while (window.pollEvent(event))
         {
@@ -169,11 +195,11 @@ void Game::RoundRun(int& counter, sf::RenderWindow& window, sf::Clock& clock, sf
         if (menuitem == 4)
             break;
 
-        if (spawnedoppcounter < counter)
+        if (spawnedoppcounter < counter && framecounter == 0)
         {
             opponents[spawnedoppcounter].SpawnEnemy(window);
             spawnedoppcounter++;
-            Sleep(5000);
+            framecounter = 120;
         }
         timer = clock.getElapsedTime();
         goldstring = ("Zloto: " + std::to_string(gold));
@@ -182,10 +208,32 @@ void Game::RoundRun(int& counter, sf::RenderWindow& window, sf::Clock& clock, sf
         timertext.setString(timerstring);
         window.clear();
         window.draw(map);
+        for (int i = 0; i < spawnedoppcounter; i++)
+        {
+            opponents[i].OppMove(window, BaseHealth, counter);
+        }
         window.draw(timertext);
         window.draw(goldtext);
         window.draw(startRect);
         window.draw(start);
+        window.draw(BaseHealth);
+        window.draw(roundText);
         window.display();
+        while (BaseHealth.getSize().x <= 0)
+        {
+            window.clear();
+            EndScreen gameover(window.getSize().x, window.getSize().y);
+            gameover.draw(window);
+            window.display();
+            gameover.EndScreenRun(window, event, mouse_pos);
+        }
+
+        if (counter == 0)
+        {
+            for (int i = 0; i < spawnedoppcounter; i++)
+                opponents[i].~Enemy();
+            delete[] opponents;
+            break;
+        }
     }
 }

@@ -3,6 +3,7 @@
 #include "SpawnPoint.h"
 
 class Enemy : public IEntity {
+	bool hitted = false;
 public:
 	SpawnPoint spawn;
 	Enemy();
@@ -11,5 +12,9 @@ public:
 
 	void SpawnEnemy(sf::RenderWindow& window);
 	void SetType(std::string type);
+
+	void OppMove(sf::RenderWindow& window, sf::RectangleShape& BaseHealth, int& counter);
+
+	void BaseHit(sf::RectangleShape& BaseHealth, int& counter);
 
 };
