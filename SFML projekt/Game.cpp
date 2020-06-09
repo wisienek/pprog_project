@@ -6,7 +6,6 @@
 #include "PauseMenu.h"
 #include <Windows.h>
 #include "EndScreen.h"
-#include "Tower.h"
 
 Game::Game(float width, float height)
 {
@@ -51,7 +50,8 @@ Game::~Game()
 int Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mouse_pos, int _diff)
 {
 
-    Tower towers[30];
+    Tower* towers = new Tower[maxtowers];
+    int towercounter = 0;
     sf::RectangleShape BaseHealth;
     BaseHealth.setFillColor(sf::Color::Green);
     BaseHealth.setSize(sf::Vector2f(500, 25));
@@ -95,6 +95,8 @@ int Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mous
         roundText.setPosition(1404, 10);
         window.clear();
         window.draw(map);
+        for (int i = 0; i < towercounter; i++)
+            window.draw(towers[i].sprite);
         for (int i = 0; i < 3; i++)
             window.draw(towersSprite[i]);
         window.draw(timertext);
@@ -113,7 +115,35 @@ int Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mous
             sf::Vector2f mouse_pos_translated = static_cast<sf::Vector2f>(mouse_pos);
             if (towersSprite[0].getGlobalBounds().contains(mouse_pos_translated) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
-                Tower tower();
+                if (towercounter < maxtowers && gold >= 500)
+                {
+                    gold -= 500;
+                    towers[towercounter].SetType("Normal");
+                    towers[towercounter].TowerBuild(window, mouse_pos, event);
+                    towercounter++;
+                }
+
+            }
+            if (towersSprite[1].getGlobalBounds().contains(mouse_pos_translated) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                if (towercounter < maxtowers && gold >= 750)
+                {
+                    gold -= 750;
+                    towers[towercounter].SetType("Sniper");
+                    towers[towercounter].TowerBuild(window, mouse_pos, event);
+                    towercounter++;
+                }
+
+            }
+            if (towersSprite[2].getGlobalBounds().contains(mouse_pos_translated) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                if (towercounter < maxtowers && gold >= 1000)
+                {
+                    gold -= 1000;
+                    towers[towercounter].SetType("Tank");
+                    towers[towercounter].TowerBuild(window, mouse_pos, event);
+                    towercounter++;
+                }
 
             }
 
@@ -121,8 +151,8 @@ int Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mous
             {
 
                 counter += 5;
-                RoundRun(BaseHealth, counter, window, clock, timer, pausemenu, mouse_pos, goldtext, goldstring, timertext, timerstring, menuitem, map, startRect, start, gold, event);
-                roundexit = RoundRun(BaseHealth, counter, window, clock, timer, pausemenu, mouse_pos, goldtext, goldstring, timertext, timerstring, menuitem, map, startRect, start, gold, event);
+                RoundRun(towers, towercounter, BaseHealth, counter, window, clock, timer, pausemenu, mouse_pos, goldtext, goldstring, timertext, timerstring, menuitem, map, startRect, start, gold, event);
+                roundexit = RoundRun(towers, towercounter, BaseHealth, counter, window, clock, timer, pausemenu, mouse_pos, goldtext, goldstring, timertext, timerstring, menuitem, map, startRect, start, gold, event);
                 if (roundexit == 1)
                     return roundexit;
             }
@@ -144,7 +174,7 @@ int Game::Update(sf::RenderWindow& window , sf::Event& event, sf::Vector2i& mous
     }
 }
 
-int Game::RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow& window, sf::Clock& clock, sf::Time& timer, PauseMenu& pausemenu, sf::Vector2i& mouse_pos, sf::Text& goldtext, std::string& goldstring, sf::Text& timertext, std::string& timerstring, int& menuitem, sf::Sprite& map, sf::RectangleShape& startRect, sf::Text& start, int& gold, sf::Event& event)
+int Game::RoundRun(Tower* towers, int& towercounter, sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow& window, sf::Clock& clock, sf::Time& timer, PauseMenu& pausemenu, sf::Vector2i& mouse_pos, sf::Text& goldtext, std::string& goldstring, sf::Text& timertext, std::string& timerstring, int& menuitem, sf::Sprite& map, sf::RectangleShape& startRect, sf::Text& start, int& gold, sf::Event& event)
 {
     roundscounter++;
     Enemy* opponents = new Enemy[counter];
@@ -194,6 +224,8 @@ int Game::RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow
         roundText.setPosition(1404, 10);
         window.clear();
         window.draw(map);
+        for (int i = 0; i < towercounter; i++)
+            window.draw(towers[i].sprite);
         for (int i = 0; i < spawnedoppcounter; i++)
         {
             opponents[i].OppMove(window, BaseHealth, counter);
@@ -208,10 +240,48 @@ int Game::RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow
         window.draw(roundText);
         window.draw(shopText);
         window.draw(prizes);
+        for (int i = 0; i < towercounter; i++)
+        {
+            for (int e = 0; e < counter; e++)
+            {
+                towers[i].CheckRange(opponents[e]);
+            }
+        }
         window.display();
         while (window.pollEvent(event))
         {
             mouse_pos = sf::Mouse::getPosition(window);
+            sf::Vector2f mouse_pos_translated = static_cast<sf::Vector2f>(mouse_pos);
+            if (towersSprite[0].getGlobalBounds().contains(mouse_pos_translated) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                if (towercounter < maxtowers)
+                {
+                    towers[towercounter].SetType("Normal");
+                    towers[towercounter].TowerBuild(window, mouse_pos, event);
+                    towercounter++;
+                }
+
+            }
+            if (towersSprite[1].getGlobalBounds().contains(mouse_pos_translated) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                if (towercounter < maxtowers)
+                {
+                    towers[towercounter].SetType("Sniper");
+                    towers[towercounter].TowerBuild(window, mouse_pos, event);
+                    towercounter++;
+                }
+
+            }
+            if (towersSprite[2].getGlobalBounds().contains(mouse_pos_translated) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                if (towercounter < maxtowers)
+                {
+                    towers[towercounter].SetType("Tank");
+                    towers[towercounter].TowerBuild(window, mouse_pos, event);
+                    towercounter++;
+                }
+
+            }
 
 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
@@ -243,6 +313,11 @@ int Game::RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow
         timertext.setString(timerstring);
         window.clear();
         window.draw(map);
+        for (int i = 0; i < towercounter; i++)
+        {
+            window.draw(towers[i].sprite);
+            window.draw(towers[i].range);
+        }
         for (int i = 0; i < spawnedoppcounter; i++)
         {
             opponents[i].OppMove(window, BaseHealth, counter);

@@ -31,7 +31,7 @@ void Enemy::SetType(std::string type)
 		this->texture.loadFromFile("resources/enemies/3_ORK.png");
 		this->sprite.setTexture(texture);
 		this->mvspeed = 0.5;
-		this->armour = 120;
+		this->armour = 60;
 		this->b_dmg = 40;
 		this->pen = false;
 	}

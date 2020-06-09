@@ -3,6 +3,7 @@
 #include "SFML/Graphics/Sprite.hpp"
 #include "Enemy.h"
 #include "PauseMenu.h"
+#include "tower.h"
 
 class Game
 {
@@ -34,7 +35,7 @@ public:
     ~Game();
     int Update(sf::RenderWindow& window, sf::Event& event, sf::Vector2i& mouse_pos, int _diff);
 
-    int RoundRun(sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow& window, sf::Clock& clock, sf::Time& timer, PauseMenu& pausemenu, sf::Vector2i& mouse_pos, sf::Text& goldtext, std::string& goldstring, sf::Text& timertext, std::string& timerstring, int& menuitem, sf::Sprite& map, sf::RectangleShape& startRect, sf::Text& start, int& gold, sf::Event& event);
+    int RoundRun(Tower* towers, int& towercounter, sf::RectangleShape& BaseHealth, int counter, sf::RenderWindow& window, sf::Clock& clock, sf::Time& timer, PauseMenu& pausemenu, sf::Vector2i& mouse_pos, sf::Text& goldtext, std::string& goldstring, sf::Text& timertext, std::string& timerstring, int& menuitem, sf::Sprite& map, sf::RectangleShape& startRect, sf::Text& start, int& gold, sf::Event& event);
 
 };
 

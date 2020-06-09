@@ -3,8 +3,8 @@
 #include "SpawnPoint.h"
 
 class Enemy : public IEntity {
-	bool hitted = false;
 public:
+	bool hitted = false;
 	SpawnPoint spawn;
 	Enemy();
 	Enemy( float x, float y);
